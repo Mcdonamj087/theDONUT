@@ -1,0 +1,210 @@
+/**********************************************
+ Global Styles
+**********************************************/
+body {
+  font-family: $body-font;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $text-color;
+}
+
+h1, h2, h3, h4, h5, h6 { 
+  color: $text-color;
+  font-family: $heading-font;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: $h1;
+  line-height: $h1-lh;
+  &.large {
+    font-size: $h1-lg;
+    line-height: $h1-lg-lh;
+    @media screen and (max-width: $mq-max-md) {
+      font-size: $h1-lg-tablet;
+      line-height: $h1-lg-lh-tablet;
+    }
+    @media screen and (max-width: $mq-max-sm) {
+      font-size: $h1-lg-mobile;
+      line-height: $h1-lg-lh-mobile;
+    }
+  }
+  @media screen and (max-width: $mq-max-md) {
+    font-size: $h1-tablet;
+    line-height: $h1-lh-tablet;
+  }
+  @media screen and (max-width: $mq-max-sm) {
+    font-size: $h1-mobile;
+    line-height: $h1-lh-mobile
+  }
+}
+h2 {
+  font-size: $h2;
+  line-height: $h2-lh;
+
+}
+h3 {
+  font-size: $h3;
+  line-height: $h3-lh;
+}
+h4 {
+  font-size: $h4;
+  line-height: $h4-lh;
+}
+h5 {
+  font-size: $h5;
+  line-height: $h5-lh;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+h6 {
+  font-size: $h6;
+  line-height: $h6-lh;
+  letter-spacing: 2px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+p {
+  font-size: $p;
+  line-height: $p-lh;
+  &.small {
+    font-size: $p-sm;
+    line-height: $p-sm-lh;
+  }
+  &.large{
+    font-size: $p-lg;
+    line-height: $p-lg-lh;
+    @media screen and (max-width: $mq-max-md) {
+      font-size: $p-lg-tablet;
+      line-height: $p-lg-lh-tablet;
+    }
+    @media screen and (max-width: $mq-max-sm) {
+      font-size: $p-lg-mobile;
+      line-height: $p-lg-lh-mobile;
+    }
+  }
+}
+
+.white-text {
+  h1,h2,h3,h4,h5,h6,p {
+    color: #FFF;
+  }
+
+}
+
+a {
+	color: $link-color;
+}
+
+strong, b { font-weight: 600 }
+
+.btn {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  background: $primary-btn-color;
+  border: $btn-stroke-width solid $primary-btn-color;
+  font-size: $btn-font-size;
+  line-height: $btn-height - ($btn-stroke-width * 2);
+  font-weight: $btn-font-weight;
+  text-align: center;
+  padding: 0px 25px;
+  border-radius: $btn-border-radius;
+  outline: 0;
+  z-index: 1;
+  cursor: pointer;
+  transition: $btn-timing-function;
+  text-decoration: none;
+  &:hover {
+    background: $primary-btn-color-hover;
+    border-color: $primary-btn-color-hover;
+  }
+  &.stroke {
+  	background: transparent;
+  	color: $primary-btn-color;
+  	&:hover {
+  		background: $primary-btn-color;
+  		border-color: $primary-btn-color;
+      color: #fff;
+      svg path {
+        stroke: #FFF;
+      }
+    }
+    svg path {
+      stroke: $primary-btn-color;
+    }
+    &.white {
+      border-color: #FFF;
+      color: #fff;
+      svg path {
+        stroke: #FFF;
+      }
+      &:hover {
+        background: #FFF;
+        color: $black;
+        svg path {
+          stroke: $black;
+        }
+      }
+    }
+  }
+
+  &+ .btn {
+    margin-left: 14px;
+  }
+
+  &.btn-small {
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  &.btn-secondary {
+  	background: $secondary-btn-color;
+    border-color: $secondary-btn-color;
+    color: #fff;
+    &:hover {
+      background: $secondary-btn-color-hover;
+      border-color: $secondary-btn-color-hover;
+      color: #fff;
+    }
+    &.stroke {
+			background: transparent;
+			color: $secondary-btn-color;
+			&:hover {
+				border-color: $secondary-btn-color;
+				background: $secondary-btn-color;
+				color: #fff;
+			}
+    }
+  }
+  svg {
+    path {
+      stroke: #FFF;
+      transition: $btn-timing-function;
+    }
+    &.arrow {
+      height: 10px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.chevron-arrow-right:after {
+  content:'';
+  display: inline-block;
+  border-right: 2px solid $text-color;
+  border-bottom: 2px solid $text-color;
+  @include size(6px);
+  transform: rotate(45deg) translateY(-3px);
+  margin-left: 5px;
+}
+
+.wrapper {
+	// margin-top: $header-height;
+	@media screen and (max-width: $mq-max-lg) {
+		margin-top: $header-height-mobile;
+	}
+}

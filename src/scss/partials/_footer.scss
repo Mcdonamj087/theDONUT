@@ -1,0 +1,75 @@
+/**********************************************
+ Footer Styles
+**********************************************/
+
+footer {
+	background: $black;
+	padding: 60px 0 40px;
+	.col {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	nav {
+		transition: $btn-timing-function;
+		&:hover {
+			a {
+				opacity: 0.3;
+			}
+		}
+		a {
+			padding: 0 15px;
+			font-size: 14px;
+			font-weight: 700;
+			color: #fff;
+			text-decoration: none;
+			transition: $btn-timing-function;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+	.footer-social-links {
+		margin: 55px 0 40px;
+		a {
+			background: #353334;
+			transition: $btn-timing-function;
+			display: block;
+			float: left;
+			@include size(50px);
+			margin: 0 7px;
+			border-radius: 50%;
+			&.fb:hover {
+				background: $periwinkle;
+			}
+			&.twit:hover {
+				background: $lightblue;
+			}
+			&.linkedin:hover {
+				background: #2F85FF;
+			}
+			&.insta:hover {
+				background: $pink;
+			}
+			&.email:hover {
+				background: $chocolate;
+			}
+		}
+	}
+	.copyright {
+		font-size: 13px;
+		color: #fff;
+		a {
+			opacity: 0.5;
+			text-decoration: none;
+			color: #fff;
+			transition: $btn-timing-function;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+}
+#footer-logo {
+	margin-bottom: 55px;
+}

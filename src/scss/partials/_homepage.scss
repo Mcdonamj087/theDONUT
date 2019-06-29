@@ -1,0 +1,462 @@
+/**********************************************
+ Homepage
+**********************************************/
+
+.homepage-hero {
+  background: $black;
+  padding-top: 30px;
+  padding-bottom: 115px;
+  @media screen and (max-width: $mq-max-lg) {
+    padding-top: 70px;
+  }
+  .col {
+    text-align: center;
+  }
+  .logo {
+    max-width: 185px;
+    margin-bottom: 70px;
+    @media screen and (max-width: $mq-max-sm) {
+      max-width: 148px;
+      margin-bottom: 50px;
+    }
+  }
+  h1 {
+    max-width: 900px;
+    margin: auto;
+    margin-bottom: 40px;
+  }
+  .ctas {
+    max-width: 530px;
+    margin: auto;
+  }
+}
+
+
+
+
+
+
+.homepage-about-section {
+  position: relative;
+  z-index: 1;
+  .donut-ingredients {
+    padding: 110px 20px;
+    position: relative;
+    background: #fff;
+    @media screen and (max-width: $mq-max-sm) {
+      padding: 60px 20px;
+    }
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .inner {
+      max-width: 450px;
+      margin: auto;
+    }
+    h1 {
+      margin-bottom: 50px;
+      @media screen and (max-width: $mq-max-sm) {
+        max-width: 250px;
+        text-align: center;
+        margin: 0 auto 50px;
+      }
+    }
+    h4 {
+      margin-top: 10px;
+      @media screen and (max-width: $mq-max-sm) {
+        text-align: center;
+      }
+    }
+    .ingredients-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      @media screen and (max-width: $mq-max-sm) {
+        
+      }
+      .ingredient {
+        flex-basis: 50%;
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        @media screen and (max-width: $mq-max-sm) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          justify-content: flex-start!important;
+        }
+        &:nth-child(even) {
+          justify-content: flex-end;
+        }
+        img {
+          margin-right: 15px;
+          @media screen and (max-width: $mq-max-sm) {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+        p {
+          font-size: 18px;
+          max-width: 140px;
+        }
+      }
+    }
+    .ingredient {
+      img {
+        width: 48px;
+      }
+    }
+    
+  }
+  .donut-mockup {
+    background-image: url('/images/donut-newsletter-mockup.jpg');
+    background-size: cover;
+    background-position: center center;
+    box-shadow: 0 22px 50px rgba($yellow, 0.4);
+    @media screen and (max-width: $mq-max-lg) {
+      flex: auto;
+      height: 420px;
+    }
+  }
+}
+
+section.flex {
+  display: flex;
+  @media screen and (max-width: $mq-max-lg) {
+    flex-direction: column;
+  }
+  & > div {
+    flex: 1 50%;
+  }
+}
+
+.homepage-quote-section {
+  .quotes {
+    background: linear-gradient( 45deg, rgba($green, .95), rgba(tint($green, 50%), .95)), url('/images/sprinkle-texture-light.jpg');
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    .quote-carousel {
+      padding: 160px 0;
+      @media screen and (max-width: $mq-max-sm) {
+        padding: 100px 0 145px;
+      }
+    }
+    .quote-wrapper {
+      position: relative;
+      margin: 0 30px;
+      .quote-box {
+        background: #fff;
+        max-width: 540px;
+        min-height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 22px 24px rgba(#3C3D5D, .23);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px 40px 40px;
+        margin: auto;
+        @media screen and (max-width: $mq-max-sm) {
+          padding: 50px 25px 40px;
+        }
+      }
+      .quote {
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 15px;
+        font-size: 18px;
+        line-height: 28px;
+        opacity: 0.6;
+      }
+      .attribution {
+        text-align: center;
+        font-size: 13px;
+        line-height: 18px;
+        text-transform: uppercase;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+  
+    }
+    .quote-marks {
+      @include size(76px);
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 12px 14px rgba(#3C3D5D, .23);
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translate(-50%, -50%);
+      @media screen and (max-width: $mq-max-sm) {
+        @include size(60px);
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .quote-pagination {
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+      font-size: 0;
+      bottom: 120px;
+      width: 100%;
+      @media screen and (max-width: $mq-max-sm) {
+        bottom: 100px;
+      }
+      button {
+        width: 37px;
+        height: 10px;
+        border-radius: 5px;
+        margin: 6px;
+        background: #fff;
+        -webkit-appearance: none;
+        border: none;
+        &.active {
+          background: $periwinkle
+        }
+      }
+    }
+  }
+  .tagline-spinner {
+    background: $cream;
+    position: relative;
+    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: $mq-max-lg) {
+      flex: auto;
+      padding: 50px 15px;
+    }
+    .tagline-spinner-middle-band {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .tagline-spinner--shell {
+      @include size(410px);
+      background: $black;
+      border-radius: 50%;
+      position: relative;
+      @media screen and (max-width: $mq-max-sm) {
+        @include size(280px);
+      }
+    }
+    #tagline-spinner-outer,
+    #tagline-spinner-inner,
+    #tagline-spinner-donut {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .tagline-spinner-middle-band {
+      @include size(64%);
+      border-radius: 50%;
+      border: 4px solid $yellow;
+      @media screen and (max-width: $mq-max-sm) {
+        border-width: 3px;
+      }
+    }
+  }
+}
+
+.homepage-subscribe {
+  padding: 170px 0 180px;
+  background: linear-gradient( 45deg, rgba($periwinkle, .95), rgba(tint($lightblue, 50%), .95)), url('/images/sprinkle-texture-dark.jpg');
+  @media screen and (max-width: $mq-max-sm) {
+    padding: 60px 0;
+  }
+  .col {
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 10px;
+    @media screen and (max-width: $mq-max-sm) {
+      max-width: 280px;
+      margin: 0 auto 10px;
+    }
+  }
+  p {
+    margin: 0 auto 40px;
+    max-width: 580px;
+  }
+  .form-wrapper {
+    max-width: 530px;
+    margin: auto;
+  }
+  ._form ._submit {
+    background: $black;
+    &:hover {
+      background: tint($black, 10%);
+    }
+  }
+}
+
+
+
+._form {
+  &.with-shadow {
+    ._form-content {
+      border-radius: 4px;
+      box-shadow: 0 12px 24px rgba(#3E4075, 0.5);
+      @media screen and (max-width: $mq-max-sm) {
+        box-shadow: unset;
+      }
+    }
+    ._form_element,
+    ._submit {
+      @media screen and (max-width: $mq-max-sm) {
+        box-shadow: 0 12px 24px rgba(#3E4075, 0.5);
+      }
+    }
+  }
+  ._form-content {
+    display: flex;
+    @media screen and (max-width: $mq-max-sm) {
+      flex-direction: column;
+    }
+  }
+  ._field-wrapper {
+    position: relative;
+    ._error {
+      background: $yellow;
+      border-radius: 4px;
+      padding: 15px 20px;
+      position: absolute;
+      right: 0;
+      bottom: -110%;
+    }
+    ._error-arrow {
+      width: 0;
+      height: 0;
+      position: absolute;
+      top: -7px;
+      transform: rotate(45deg);
+      z-index: 0;
+      left: 20px;
+      background: transparent;
+      border-top: 8px solid $yellow;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+      border-left: 8px solid $yellow;
+    }
+  }
+  input {
+    padding: 20px 20px;
+    width: 100%;
+    font-size: 18px;
+    font-family: $body-font;
+    line-height: 20px;
+    border-radius: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+  }
+  
+  ._submit {
+    font-family: $body-font;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 20px 20px;
+    line-height: 20px;
+    border-radius: 0;
+    border: none;
+    color: #fff;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    background: $primary-btn-color;
+    transition: $btn-timing-function;
+    cursor: pointer;
+    @media screen and (max-width: $mq-max-sm) {
+      position: relative;
+      width: 100%;
+    }
+    &:hover {
+      background: $primary-btn-color-hover;
+    }
+  }
+  ._form_element {
+    margin: 0;
+    flex: 1;
+    @media screen and (max-width: $mq-max-sm) {
+      margin-bottom: 15px;
+    }
+    label {
+      display: none;
+    }
+  }
+  input,
+  ._submit {
+    @media screen and (max-width: $mq-max-sm) {
+      border-radius: 4px;
+    }
+  }
+}
+
+._form-thank-you {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: scale(0.8) translate(-50%, -50%);
+  padding: 60px 90px 80px;
+  background: #fff;
+  z-index: 100;
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(#383960, .3);
+  opacity: 0;
+  transform-origin: 0% 20%;
+  pointer-events: none;
+  transition: $btn-timing-function;
+  &.active {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translate(-50%, -50%);
+  }
+  h1, p {
+    color: $black;
+    text-align: center;
+  }
+  h1 {
+    margin-bottom: 30px;
+  }
+  .close-btn {
+    @include size(17px);
+    padding: 20px;
+    box-sizing: content-box;
+    position: absolute;
+    cursor: pointer;
+    transition: $btn-timing-function;
+    top: 0;
+    right: 0;
+    &:after,
+    &:before {
+      content:'';
+      width: 21px;
+      height: 4px;
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: 0% 0%;
+      transform: rotate(-45deg) translate(-50%, -50%);
+      background: $black;
+    }
+    &:after {
+      transform: rotate(45deg) translate(-50%, -50%);
+    }
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  .lottie-check-mark {
+    @include size(160px);
+    margin: auto;
+  }
+}

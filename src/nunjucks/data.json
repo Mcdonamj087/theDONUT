@@ -1,0 +1,22 @@
+{
+	"name" : "My Dope Project",
+	"projects" : [{
+		"title" : "OutboundEngine Website",
+		"dataproject" : "outboundengine"
+	}, {
+		"title" : "eGo Bikeshare",
+		"dataproject" : "ego"
+	}, {
+		"title" : "Scrypt Website",
+		"dataproject" : "scrypt"
+	}, {
+		"title" : "Runa Sustainability Report",
+		"dataproject" : "runa"
+	}, {
+		"title" : "Good Grade Pill",
+		"dataproject" : "goodgradepill"
+	}, {
+		"title" : "Posters",
+		"dataproject" : "posters"
+	}]
+}
