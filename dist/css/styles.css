@@ -1570,3 +1570,39 @@ section.flex > div {
   width: 160px;
   margin: auto;
 }
+
+/**********************************************
+ About
+**********************************************/
+/* line 5, src/scss/partials/_about.scss */
+.about {
+  background: #1A1418;
+  padding-top: 30px;
+  padding-bottom: 115px;
+}
+
+@media screen and (max-width: 991px) {
+  /* line 5, src/scss/partials/_about.scss */
+  .about {
+    padding-top: 70px;
+  }
+}
+
+/* line 12, src/scss/partials/_about.scss */
+.about .col {
+  text-align: center;
+}
+
+/* line 15, src/scss/partials/_about.scss */
+.about .logo {
+  max-width: 185px;
+  margin-bottom: 70px;
+}
+
+@media screen and (max-width: 575px) {
+  /* line 15, src/scss/partials/_about.scss */
+  .about .logo {
+    max-width: 148px;
+    margin-bottom: 50px;
+  }
+}

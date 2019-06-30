@@ -1,0 +1,24 @@
+/**********************************************
+ About
+**********************************************/
+
+.about {
+  background: $black;
+  padding-top: 30px;
+  padding-bottom: 115px;
+  @media screen and (max-width: $mq-max-lg) {
+    padding-top: 70px;
+  }
+  .col {
+    text-align: center;
+  }
+  .logo {
+    max-width: 185px;
+    margin-bottom: 70px;
+    @media screen and (max-width: $mq-max-sm) {
+      max-width: 148px;
+      margin-bottom: 50px;
+    }
+  }
+
+}

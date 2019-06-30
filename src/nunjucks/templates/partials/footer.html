@@ -3,12 +3,13 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <img id="footer-logo" src="/svg/donut-logo-horizontal.svg">
+        <a href="/">
+          <img id="footer-logo" src="/svg/donut-logo-horizontal.svg">
+        </a>
         <nav>
-          <a href="#">Ambassadors</a>
-          <a href="#">Contact</a>
-          <a href="#">Rating System</a>
-          <a href="#">Team</a>
+          {% for item in footer_nav_items %}
+            <a href="{{ item.href }}" title="{{ item.title }}">{{ item.title }}</a>
+          {% endfor %}
         </nav>
         <div class="footer-social-links">
           <a class="fb" href="#"><img src="/svg/footer-social-icon--fb.svg" alt="Facebook"></a>

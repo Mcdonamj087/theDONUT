@@ -1,22 +1,23 @@
 {
-	"name" : "My Dope Project",
-	"projects" : [{
-		"title" : "OutboundEngine Website",
-		"dataproject" : "outboundengine"
-	}, {
-		"title" : "eGo Bikeshare",
-		"dataproject" : "ego"
-	}, {
-		"title" : "Scrypt Website",
-		"dataproject" : "scrypt"
-	}, {
-		"title" : "Runa Sustainability Report",
-		"dataproject" : "runa"
-	}, {
-		"title" : "Good Grade Pill",
-		"dataproject" : "goodgradepill"
-	}, {
-		"title" : "Posters",
-		"dataproject" : "posters"
+	"name" : "the DONUT",
+	"header_nav_items" : [{
+		"title" : "About",
+		"href" : "/about.html"
+	},{
+		"title" : "Shop",
+		"href" : "https://shop.thedonut.co"
+	}],
+	"footer_nav_items" : [{
+		"title" : "Ambassadors",
+		"href" : "/ambassadors.html"
+	},{
+		"title" : "Contact",
+		"href" : "/contact.html"
+	},{
+		"title" : "Rating System",
+		"href" : "/rating-system.html"
+	},{
+		"title" : "Team",
+		"href" : "/team.html"
 	}]
 }
