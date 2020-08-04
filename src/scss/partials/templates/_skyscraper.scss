@@ -1,0 +1,28 @@
+/**********************************************
+ Global Template - Skyscraper
+**********************************************/
+
+section.skyscraper {
+  padding: 160px 0 100px;
+  &.dark {
+    background: $lighter-black;
+  }
+  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+    color: #fff;
+  }
+  .skyscraper-container {
+    max-width: 540px;
+    margin: auto;
+    padding: 0 15px;
+  }
+  h1.large {
+    margin-bottom: 40px;
+  }
+  h2 {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 20px;
+    
+  }
+}

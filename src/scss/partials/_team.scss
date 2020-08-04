@@ -1,0 +1,54 @@
+/**********************************************
+ Team
+**********************************************/
+.team-hero {
+  background: $black;
+  padding-top: 160px;
+  padding-bottom: 280px;
+  text-align: center;
+  position: relative;
+  @media screen and (max-width: $mq-max-xl) {
+    padding-bottom: 260px;
+  }
+}
+
+.team-headshots {
+  margin-top: -170px;
+  padding-bottom: 120px;
+  @media screen and (max-width: $mq-max-xl) {
+    margin-top: -150px;
+  }
+}
+
+.team-member-wrap {
+  // max-width: 310px; // 3-column
+  max-width: 249px; // 4-column
+  margin: 0 auto 40px;
+  text-align: center;
+  @media screen and (max-width: $mq-max-xl) {
+    // max-width: 260px; // 3-column
+  }
+  @media screen and (max-width: $mq-max-lg) {
+    max-width: 280px;
+  }
+  @media screen and (max-width: $mq-max-md) {
+    max-width: 230px;
+  }
+  @media screen and (max-width: $mq-max-sm) {
+    max-width: 280px;
+  }
+  .headshot-wrap {
+    background: linear-gradient(45deg, $periwinkle, $green);
+    border-radius: 50%;
+    padding: 10px;
+    margin-bottom: 25px;
+  }
+  img {
+    width: 100%;
+    border-radius: 50%;
+    position: relative;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+}

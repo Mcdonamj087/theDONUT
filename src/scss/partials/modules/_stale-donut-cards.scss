@@ -1,0 +1,44 @@
+/**********************************************
+ Stale DONUT Cards
+**********************************************/
+
+.stale-donut-card {
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 22px 24px rgba(#3C3D5D, .23);
+  height: calc(100% - 30px);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  .top {
+    height: 140px;
+    position: relative;
+    flex: 0 1 auto;
+  }
+  .featured-image {
+    img {
+      @include size(100%);
+      object-fit: cover;
+    }
+  }
+  .date-bubble {
+    background: rgba($black, .9);
+    @include position(absolute, 50% null null 20px);
+    transform: translateY(-50%);
+  }
+  .bottom {
+    padding: 20px 25px 95px;
+    position: relative;
+    flex: auto;
+    .title {
+      margin-bottom: 10px;
+    }
+    .excerpt {
+      line-height: 24px;
+    }
+    .btn {
+      @include position(absolute, null null 25px 25px);
+    }
+  }
+  
+}

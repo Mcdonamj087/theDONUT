@@ -1,0 +1,35 @@
+{% set page = "rating-system" %}
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/header.html" %}
+
+<section class="skyscraper dark">
+	<div class="skyscraper-container">
+    
+    <h1 class="large">the DONUT Rating System</h1>
+    <p>It seems these days, news sources are dedicated to pushing a certain perspective over others, sometimes making it hard to figure out what’s true and what’s spin. <a href="https://en.wikipedia.org/wiki/Walter_Cronkite" target="_blank">Walter Cronkite</a> once said, “In seeking truth you have to get both sides of a story” and we utilize a rating system to help provide you with just that.</p>
+    <div class="spacer-40"></div>
+    <h2>Got it, can you tell me more?</h2>
+    <p>Of course. The system is powered by <a href="https://mediabiasfactcheck.com/about/" target="_blank">MediaBias/FactCheck</a>, the most comprehensive media bias resource available. To be clear, these ratings are SUBJECTIVE and should be treated as such, but convey a good idea of the perspective you’re about to read. Essentially, publications tend to be politically biased in some way & the rating system shouldn’t be taken as fact, but rather as a guideline.</p>
+    <div class="spacer-40"></div>
+    <h2>Makes sense. If it's subjective, how is it calculated?</h2>
+    <p>Great question. It takes a variety of things into account like:</p>
+    <ul>
+      <li>Does the source use loaded words to convey emotion to sway the reader? Do the headlines match the story?</li>
+      <li>Does the source report factually and back up claims with well sourced evidence? Does the source report news from both sides or do they only publish one side?</li>
+      <li>How strongly does the source endorse a particular political ideology? What does the public think?</li>
+    </ul>
+    <p>The sources are then scored based on answers to those questions - to find out about the full, nitty-gritty, in-depth breakdown of how the scores are calculated, check out <a href="https://mediabiasfactcheck.com/methodology/" target="_blank">this page</a>.</p>
+    <div class="spacer-40"></div>
+    <h2>Is MediaBias/FactCheck legit?</h2>
+    <p>We’ll leave that up to you to decide. Researchers at the <a href="https://csmr.umich.edu/wp-content/uploads/2018/10/UMSI-CSMR-Iffy-Quotient-Whitepaper-810084.pdf" target="_blank">University of Michigan</a> & <a href="https://aclweb.org/anthology/D18-1389" target="_blank">MIT</a> have used MediaBias/FactCheck’s ratings to track the prevalence of <a href="https://campustechnology.com/articles/2018/10/16/u-m-tracker-measures-reliability-of-news-on-facebook-twitter.aspx" target="_blank">‘fake news’ & questionable sources on social media</a>, as well as to <a href="https://www.popsci.com/AI-fake-news" target="_blank">initially train an AI to fact check and detect the bias of websites.</a></p>
+
+  </div>
+</section>
+
+
+{% include "partials/footer.html" %}
+	
+{% endblock %}

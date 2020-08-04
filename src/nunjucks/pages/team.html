@@ -1,0 +1,46 @@
+{% set page = "team" %}
+
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/header.html" %}
+
+<section class="team-hero">
+	<div class="container">
+		<div class="row">
+			<div class="col white-text">
+        <div class="about-excerpt">
+          <h1 class="large">Meet the team.</h1>
+        </div>
+			</div>
+		</div>
+	</div>
+<img class="section-contour-bottom" src="{{root_url}}/svg/frosting-contour-white.svg">
+</section>
+
+<section class="team-headshots">
+  <div class="container">
+    <div class="row">
+      {% for teammate in teammates %}
+      <div class="col-sm-6 col-lg-4">
+        <div class="team-member-wrap">
+          <div class="headshot-wrap">
+            <img src="{{root_url}}{{teammate.imgsrc}}" alt="{{teammate.name}} Headshot">
+          </div>
+          <h3>{{teammate.name}}</h3>
+          <h6>{{teammate.title}}</h6>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+
+
+{% include "partials/footer.html" %}
+	
+{% endblock %}

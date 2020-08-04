@@ -1,0 +1,53 @@
+{% set page = "welcome" %}
+{% set body_class = "black-nav-text" %}
+
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/header.html" %}
+
+<section class="welcome-container">
+
+  <div class="pyro">
+    <div class="before"></div>
+    <div class="after"></div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="inner">
+          <h1 class="large">Well...you did it.</h1>
+          <img class="welcome-gif adapt" src="{{root_url}}/images/welcome-gif.gif" alt="Welcome GIF">
+          <p class="medium">
+            You took a leap and joined the DONUT. Each weekday morning, you’ll receive an email from us containing the most important politics, current events and business news of the day - with a little positivity thrown in. <em>Welcome aboard.</em></br></br>
+            We’re building a community of empowered news consumers who want to see the world as it actually is, not as someone else tells it. We strive to provide a home for the relentlessly curious, those who don’t blindly believe everything they hear, see or read.</br></br>          
+            Thanks for embarking with us upon our journey to deliver empowerment through information...even if you only use that power to flex on your friends or that uncle at family gatherings (you know the one I’m talking about). We don’t judge, we just serve up the news to your inbox each weekday.</br></br>
+            Look out for the 🍩 in your inbox tomorrow morning. If you can’t wait, <a href="{{ pages.todays_donut.slug }}" title="{{ pages.todays_donut.title }}">check out our most recent email.</a></br></br>
+            If you ever have any comments, questions, concerns, or just want to chat, reply directly to ANY email you receive from the DONUT and we’ll take care of you.</br></br>
+            Talk soon,</br>
+            Peter - CEO at the DONUT
+          </p>
+          <div class="welcome-foot">
+            <div class="postscript">
+              <p class="medium"><strong>PS. Have a sweet tooth? Get more flavor daily and follow the DONUT on social or <a href="{{ pages.shop.slug }}" title="{{ pages.shop.title }}">grab some sweet gear</a>!</strong></p>
+              <img class="arrow" src="{{ root_url }}/svg/curve-arrow.svg">
+              {% include "partials/social-links.html" %}
+            </div>
+            <img class="tshirt" src="{{ root_url }}/images/donut-kill-my-vibe-tshirt.jpg" alt="DONUT Kill My Vibe Tshirt">
+          </div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+{% include "partials/footer.html" %}
+	
+{% endblock %}

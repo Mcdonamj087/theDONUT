@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The DONUT - Dose Of News Useful Today {% if page %} - {{ pages[page].title }} {% endif %}</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+	<link rel="manifest" href="/site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#2b5797">
+	<meta name="theme-color" content="#ffffff">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="{{root_url}}/css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="{{root_url}}/css/ambassadors.css">
+</head>
+<body 
+	{% if page and not body_class %} 
+		class="{{ page }}" 
+	{% elif body_class and not page %} 
+		class="{{ body_class }}" 
+	{% elif page and body_class %} 
+		class="{{ page }} {{ body_class }}"
+	{% endif %}
+>
+
+<div class="wrapper">
+
+	{% block content %} {% endblock %}
+
+</div> <!-- ends 'wrapper' div -->
+	<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/body-scroll-lock@2.6.3/lib/bodyScrollLock.min.js"></script>
+	<script type="text/javascript" src="/js/plugins/lodash/lodash.custom.min.js"></script>
+	<script type="text/javascript" src="/js/main.min.js"></script>
+
+ 	{% for script in scripts[page] %}
+		<script type="text/javascript" src="{{ script }}"></script>
+	{% endfor %}
+	
+</body>
+</html>

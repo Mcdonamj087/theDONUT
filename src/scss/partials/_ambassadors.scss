@@ -1,0 +1,78 @@
+/**********************************************
+ Ambassadors
+**********************************************/
+
+.ambassador-wrapper {
+  display: flex;
+  min-height: 100vh;
+  @media screen and (max-width: $mq-max-lg) {
+    flex-direction: column;
+  }
+}
+
+.ambassador-signup-container {
+  background: linear-gradient(45deg, rgba($periwinkle, .93), rgba($pink, .93)), url('http://localhost:3000/images/donut-newsletter-mockup.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 1 auto;
+  padding: 60px 15px;
+  .inner {
+    max-width: 480px;
+    text-align: center;
+  }
+  h1 {
+    max-width: 390px;
+    margin: 0 auto 20px;
+  }
+  p.medium {
+    margin-bottom: 50px;
+  }
+  form {
+    margin-bottom: 30px;
+    
+  }
+}
+
+.ambassador-info-container {
+  background: $black;
+  flex: 0 1 500px;
+  padding: 60px 15px;
+  .logo {
+    max-width: 136px;
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+    
+  }
+  h4 {
+    font-size: 18px;
+    span {
+      color: $green;
+      margin: 0 3px;
+      &:nth-of-type(2) {
+        color: $yellow;
+      }
+      &:nth-of-type(3) {
+        color: $lightblue;
+      }
+      &:nth-of-type(4) {
+        color: $pink;
+      }
+    }
+  }
+  .ingredients-wrapper {
+    margin: 50px 0;
+  }
+  .ingredient {
+    display: flex;
+    align-items: center;
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+    img {
+      width: 36px;
+      margin-right: 20px;
+    }
+  }
+}

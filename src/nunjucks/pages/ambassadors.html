@@ -1,0 +1,78 @@
+{% set page = "ambassadors" %}
+
+{% extends "ambassadors.nunjucks" %}
+
+{% block content %}
+
+
+
+<section class="ambassador-wrapper">
+
+  <section class="ambassador-signup-container flex-center">
+    <div class="inner white-text">
+      <h1>Wow. You have really cool friends &#128526;</h1>
+      <p class="medium">If you’re landing here, it’s because someone thought you should be joining the community of empowered news consumers who start the day with our email.<br><br>They must be on to something…</p>
+
+      
+      <div style="position: relative">
+
+        <form id="ambassador-signup-form" class="js-cm-form with-shadow">   
+          <div class="form-content">
+
+            <div class="field-wrapper">
+              <input name="email" type="email" placeholder="Enter your email" />
+            </div>
+            
+            <div class="button-wrapper">
+              <button type="submit">Check it out</button>
+            </div>
+          </div>
+        </form>
+        <div class="validation-message">
+          Please enter a valid email address
+        </div>
+        
+      </div>
+
+      <h4>Already an Ambassador?</h4>
+      <p>Enter your email to check your rewards.</p>
+    </div>
+  </section>
+
+  <section class="ambassador-info-container flex-center">
+    <div class="white-text">
+      <img class="logo" src="{{root_url}}/svg/donut-logo-vertical.svg" alt="the DONUT Logo">
+      <h4>Dose <span>&#8226;</span> Of <span>&#8226;</span> News <span>&#8226;</span> Useful <span>&#8226;</span> Today</h4>
+      <div class="ingredients-wrapper">
+        <div class="ingredient">
+          <img src="{{root_url}}/svg/icon-lightbulb.svg">
+          <p>Fact-based news</p>
+        </div>
+        <div class="ingredient">
+          <img src="{{root_url}}/svg/icon-opinion-free.svg">
+          <p>Opinion-free information</p>
+        </div>
+        <div class="ingredient">
+          <img src="{{root_url}}/svg/icon-360.svg">
+          <p>Equal representation on the issues</p>
+        </div>
+        <div class="ingredient">
+          <img src="{{root_url}}/svg/icon-positivity.svg">
+          <p>Relentless positivity</p>
+        </div>
+      </div>
+      <h4>...delivered to your inbox daily.</h4>
+    </div>
+    
+  </section>
+
+</section>
+
+<div id="donut-loader">
+  <img class="inner" src="{{root_url}}/svg/donut-loader-inner.svg">
+  <img class="outer" src="{{root_url}}/svg/donut-loader-outer.svg">
+</div>
+
+<script>!function(){var a=window.VL=window.VL||{};return a.instances=a.instances||{},a.invoked?void(window.console&&console.error&&console.error("VL snippet loaded twice.")):(a.invoked=!0,void(a.load=function(b,c,d){var e={};e.publicToken=b,e.config=c||{};var f=document.createElement("script");f.type="text/javascript",f.id="vrlps-js",f.defer=!0,f.src="https://app.viral-loops.com/client/vl/vl.min.js";var g=document.getElementsByTagName("script")[0];return g.parentNode.insertBefore(f,g),f.onload=function(){a.setup(e),a.instances[b]=e},e.identify=e.identify||function(a,b){e.afterLoad={identify:{userData:a,cb:b}}},e.pendingEvents=[],e.track=e.track||function(a,b){e.pendingEvents.push({event:a,cb:b})},e.pendingHooks=[],e.addHook=e.addHook||function(a,b){e.pendingHooks.push({name:a,cb:b})},e.$=e.$||function(a){e.pendingHooks.push({name:"ready",cb:a})},e}))}();var campaign=VL.load("hOSS8PYC03GzKkHso8ORt9JX5ic",{autoLoadWidgets:!0});</script>
+
+{% endblock %}

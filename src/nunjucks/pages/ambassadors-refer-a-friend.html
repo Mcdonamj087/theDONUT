@@ -1,0 +1,70 @@
+{% set page = "ambassadors-refer-a-friend" %}
+{% set body_class = "black-nav-text" %}
+
+{% extends "ambassadors.nunjucks" %}
+
+{% block content %}
+
+{% include "partials/header.html" %}
+
+<section class="ambassador-refer-hero">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h1>Now that we're friends...<span>Check out the benefits</span></h1>
+        <p class="large">Share the DONUT and get cool stuff.</p>
+
+        <div class="refer-steps">
+          <div class="step">
+            <div class="number flex-center">1</div>
+            <p>Copy your unique link below</p>
+          </div>
+          <div class="step">
+            <div class="number flex-center">2</div>
+            <p>Share with family and friends</p>
+          </div>
+          <div class="step">
+            <div class="number flex-center">3</div>
+            <p>Ca$h in, on to the next one</p>
+          </div>
+        </div>
+
+        <div class="ambassador-share-container">
+          <div data-vl-widget="embedForm"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <img class="section-contour-bottom" src="http://localhost:3000/svg/frosting-contour-white.svg">
+</section>
+
+<section class="count-and-rewards">
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+
+        <h5>Your Referral Count:</h5>
+
+        <div data-vl-widget="referralCountWidget" class="referral-count-widget"></div>
+        
+        <div id="milestone-message">
+          <h3>Refer friends and win the prizes below!</h3>
+        </div>
+        
+
+        <div data-vl-widget="milestoneWidget" class="milestone-widget"></div>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<script>!function(){var a=window.VL=window.VL||{};return a.instances=a.instances||{},a.invoked?void(window.console&&console.error&&console.error("VL snippet loaded twice.")):(a.invoked=!0,void(a.load=function(b,c,d){var e={};e.publicToken=b,e.config=c||{};var f=document.createElement("script");f.type="text/javascript",f.id="vrlps-js",f.defer=!0,f.src="https://app.viral-loops.com/client/vl/vl.min.js";var g=document.getElementsByTagName("script")[0];return g.parentNode.insertBefore(f,g),f.onload=function(){;a.setup(e),a.instances[b]=e},e.identify=e.identify||function(a,b){e.afterLoad={identify:{userData:a,cb:b}}},e.pendingEvents=[],e.track=e.track||function(a,b){e.pendingEvents.push({event:a,cb:b})},e.pendingHooks=[],e.addHook=e.addHook||function(a,b){e.pendingHooks.push({name:a,cb:b})},e.$=e.$||function(a){e.pendingHooks.push({name:"ready",cb:a})},e}))}();var campaign=VL.load("hOSS8PYC03GzKkHso8ORt9JX5ic",{autoLoadWidgets:!0});</script>
+
+
+
+{% include "partials/footer.html" %}
+
+{% endblock %}

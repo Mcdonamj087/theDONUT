@@ -1,0 +1,33 @@
+/**********************************************
+ Today's DONUT
+**********************************************/
+.sprinkle-hero.todays-donut {
+  padding-bottom: 280px;
+}
+
+.todays-donut-newsletter {
+  max-width: 750px;
+  margin: auto;
+  background: #ECECEC;
+  padding: 120px 0 60px;
+  transform: translateY(-160px);
+  box-shadow: 0 22px 44px rgba(#3C3D5D, .4);
+  position: relative;
+  @media screen and (max-width: $mq-max-sm) {
+    transform: translateY(-180px);
+  }
+  .date-bubble {
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    @media screen and (max-width: $mq-max-sm) {
+      transform: translateX(-50%) scale(.8);
+    }
+  }
+}
+
+.newsletter-html {
+  max-width: 600px;
+  margin: auto;
+}

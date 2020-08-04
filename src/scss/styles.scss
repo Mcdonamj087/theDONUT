@@ -1,8 +1,38 @@
 @import '../../node_modules/bourbon/core/bourbon';
-@import 'partials/reset';
-@import 'partials/variables';
-@import 'partials/global';
-@import 'partials/header';
-@import 'partials/footer';
+
+// ==========================================
+//  GLOBALS 
+// ==========================================
+@import 'partials/globals/reset';
+@import 'partials/globals/variables';
+@import 'partials/globals/global';
+@import 'partials/globals/cm-forms';
+
+
+// ==========================================
+//  MODULES 
+// ==========================================
+@import 'partials/modules/header';
+@import 'partials/modules/footer';
+@import 'partials/modules/date-bubbles';
+@import 'partials/modules/sprinkle-hero';
+@import 'partials/modules/stale-donut-cards';
+@import 'partials/modules/footer-subscribe';
+
+
+// ==========================================
+//  TEMPLATES 
+// ==========================================
+@import 'partials/templates/skyscraper';
+
+// ==========================================
+//  PAGES 
+// ==========================================
 @import 'partials/homepage';
+@import 'partials/welcome';
 @import 'partials/about';
+@import 'partials/team';
+@import 'partials/latest';
+@import 'partials/archives';
+
+

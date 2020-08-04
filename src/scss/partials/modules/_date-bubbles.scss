@@ -1,0 +1,49 @@
+/**********************************************
+ Date Bubbles
+**********************************************/
+
+.date-bubble {
+  background: $black;
+  border-radius: 50%;
+  @include size(160px);
+  padding: 25px 0;
+  p {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    line-height: inherit!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+  }
+  .weekday {
+    font-size: 14px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+  }
+  .month {
+    font-size: 20px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+    letter-spacing: 2.2px;
+    margin-bottom: 7px;
+  }
+  .day {
+    font-size: 56px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+    letter-spacing: 6.2px;
+  }
+  &.small {
+    @include size(100px);
+    padding: 15px 0;
+    .weekday {
+      font-size: 10px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+      letter-spacing: 1.1px;
+      margin-bottom: 7px;
+    }
+    .month {
+      font-size: 14px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+      letter-spacing: 1px;
+      margin-bottom: 3px;
+    }
+    .day {
+      font-size: 36px!important; // preserve styles from being overwritten by inline newsletter styles on single newsletter page
+      letter-spacing: 3px;
+    }
+  }
+}

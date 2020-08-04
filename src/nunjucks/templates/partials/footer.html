@@ -3,22 +3,16 @@
   <div class="container">
     <div class="row">
       <div class="col">
-        <a href="/">
-          <img id="footer-logo" src="/svg/donut-logo-horizontal.svg">
+        <a href="{{ pages.home.slug }}">
+          <img id="footer-logo" src="{{root_url}}/svg/donut-logo-horizontal.svg">
         </a>
         <nav>
-          {% for item in footer_nav_items %}
-            <a href="{{ item.href }}" title="{{ item.title }}">{{ item.title }}</a>
-          {% endfor %}
+        {% for item in footer_nav_items %}
+          <a href="{{ item.href }}" title="{{ item.title }}">{{ item.title }}</a>
+        {% endfor %}
         </nav>
-        <div class="footer-social-links">
-          <a class="fb" href="#"><img src="/svg/footer-social-icon--fb.svg" alt="Facebook"></a>
-          <a class="twit"href="#"><img src="/svg/footer-social-icon--twitter.svg" alt="Twitter"></a>
-          <a class="linkedin"href="#"><img src="/svg/footer-social-icon--linkedin.svg" alt="LinkedIn"></a>
-          <a class="insta"href="#"><img src="/svg/footer-social-icon--instagram.svg" alt="Instagram"></a>
-          <a class="email"href="#"><img src="/svg/footer-social-icon--email.svg" alt="Email"></a>
-        </div>
-        <p class="copyright">&copy;Copyright 2019 Dear America, LLC &nbsp;|&nbsp; <a href="#">Privacy</a></p>
+        {% include "partials/social-links.html" %}
+        <p class="copyright">&copy;Copyright 2019 Dear America, LLC &nbsp;|&nbsp; <a target="_blank" href="https://mydonut.co/privacy-policy">Privacy</a></p>
       </div>
     </div>
   </div>

@@ -1,0 +1,26 @@
+/**********************************************
+ Footer Subscribe
+**********************************************/
+
+.footer-subscribe {
+  padding: 170px 0 180px;
+  background: linear-gradient( 45deg, rgba($periwinkle, .95), rgba($lightblue, .95)), url('http://localhost:3000/images/sprinkle-texture-dark.jpg');
+  @media screen and (max-width: $mq-max-sm) {
+    padding: 60px 0;
+  }
+  .col {
+    text-align: center;
+  }
+  h1 {
+    max-width: 800px;
+    margin: 0 auto 10px;
+  }
+  p {
+    margin: 0 auto 40px;
+    max-width: 700px;
+  }
+  .form-wrapper {
+    max-width: 530px;
+    margin: auto;
+  }
+}

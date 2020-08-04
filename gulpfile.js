@@ -61,7 +61,14 @@ var paths = {
 			output: 'dist/'
 		}
 	},
-	reload: './dist/'
+	reload: './dist/',
+	find_replace: {
+		input: 'dist/**/*',
+		find: 'http://localhost:3000',
+		replace_local: 'http://localhost:8888/theDONUT/wp-content/themes/theDONUT',
+		replace_live: 'https://thedonut.co/wp-content/themes/theDONUT',
+		replace_live_ambassadors: 'https://ambassadors.thedonut.co/wp-content/themes/theDONUT'
+	}
 };
 
 
@@ -84,7 +91,17 @@ var banner = {
 		' | (c) ' + new Date().getFullYear() + ' <%= package.author.name %>' +
 		' | <%= package.license %> License' +
 		' | <%= package.repository.url %>' +
-		' */\n'
+		' */\n',
+	wp:
+		'/*\n' +
+		'Theme Name: the DONUT\n' +
+		'Author: Matt McDonald\n' +
+		'Author URI: mattmcdonalddesign.com\n' +
+		'Description: the DONUT\n' +
+		'Version: 1.0\n' +
+		'License: GNU General Public License v2 or later\n' +
+		'License URI: http://www.gnu.org/licenses/gpl-2.0.html\n' +
+		'*/\n\n'
 };
 
 
@@ -102,6 +119,7 @@ var lazypipe = require('lazypipe');
 var rename = require('gulp-rename');
 var header = require('gulp-header');
 var package = require('./package.json');
+var replace = require('gulp-replace');
 
 // Scripts
 var jshint = require('gulp-jshint');
@@ -225,14 +243,13 @@ var buildStyles = function (done) {
 	return src(paths.styles.input, { sourcemaps: true })
 		.pipe(sass({
 			outputStyle: 'expanded',
-			sourceComments: true
+			sourceComments: false
 		}))
 		.pipe(prefix({
-			browsers: ['last 2 version', '> 0.25%'],
 			cascade: true,
 			remove: true
 		}))
-		.pipe(header(banner.full, { package : package }))
+		.pipe(header(banner.wp, { package : package }))
 		.pipe(dest(paths.styles.output))
 		.pipe(rename({suffix: '.min'}))
 		.pipe(minify({
@@ -366,6 +383,27 @@ var watchSource = function (done) {
 	done();
 };
 
+// Find and replace root url in dist folder for local WP
+function replaceLocal() {
+	return src(paths.find_replace.input)
+		.pipe(replace(paths.find_replace.find, paths.find_replace.replace_local))
+		.pipe(dest(paths.copy.root.output));
+};
+
+// Find and replace root url in dist folder for thedonut.co
+function replaceLive() {
+	return src(paths.find_replace.input)
+		.pipe(replace(paths.find_replace.find, paths.find_replace.replace_live))
+		.pipe(dest(paths.copy.root.output));
+};
+
+// Find and replace root url in dist folder for thedonut.co
+function replaceLiveAmbassadors() {
+	return src(paths.find_replace.input)
+		.pipe(replace(paths.find_replace.find, paths.find_replace.replace_live_ambassadors))
+		.pipe(dest(paths.copy.root.output));
+};
+
 
 /**
  * Export Tasks
@@ -402,3 +440,7 @@ exports.watch = series(
 	startServer,
 	watchSource
 );
+
+exports.replace_local = replaceLocal;
+exports.replace_live = replaceLive;
+exports.replace_live_ambassadors = replaceLiveAmbassadors;

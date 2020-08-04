@@ -4,27 +4,48 @@
 
 .homepage-hero {
   background: $black;
-  padding-top: 30px;
+  padding-top: 130px;
   padding-bottom: 115px;
-  @media screen and (max-width: $mq-max-lg) {
-    padding-top: 70px;
+  @media screen and (max-width: $mq-max-sm) {
+    padding-top: 110px;
+    padding-bottom: 60px;
   }
   .col {
     text-align: center;
   }
   .logo {
-    max-width: 185px;
-    margin-bottom: 70px;
+    max-width: 500px;
+    display: block;
+    margin: 0 auto 60px;
     @media screen and (max-width: $mq-max-sm) {
-      max-width: 148px;
-      margin-bottom: 50px;
+      margin: 0 auto 30px;
+    }
+    img {
+      max-width: 185px;
+      margin-bottom: 20px;
+      display: none;
+      @media screen and (max-width: $mq-max-sm) {
+        max-width: 148px;
+        margin-bottom: 50px;
+      }
+    }
+    .logo-animation {
+      max-width: 500px;
     }
   }
-  h1 {
-    max-width: 900px;
+  .text-wrapper {
+    max-width: 850px;
     margin: auto;
     margin-bottom: 40px;
+    h1 {
+      
+      margin-bottom: 20px;
+    }
+    p {
+      opacity: 0.6;
+    }
   }
+  
   .ctas {
     max-width: 530px;
     margin: auto;
@@ -111,7 +132,7 @@
     
   }
   .donut-mockup {
-    background-image: url('/images/donut-newsletter-mockup.jpg');
+    background-image: url('http://localhost:3000/images/donut-newsletter-mockup-oct-2019.jpg');
     background-size: cover;
     background-position: center center;
     box-shadow: 0 22px 50px rgba($yellow, 0.4);
@@ -134,7 +155,7 @@ section.flex {
 
 .homepage-quote-section {
   .quotes {
-    background: linear-gradient( 45deg, rgba($green, .95), rgba(tint($green, 50%), .95)), url('/images/sprinkle-texture-light.jpg');
+    background: linear-gradient( 45deg, rgba($green, .95), rgba(tint($green, 50%), .95)), url('http://localhost:3000/images/sprinkle-texture-light.jpg');
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -264,199 +285,5 @@ section.flex {
         border-width: 3px;
       }
     }
-  }
-}
-
-.homepage-subscribe {
-  padding: 170px 0 180px;
-  background: linear-gradient( 45deg, rgba($periwinkle, .95), rgba(tint($lightblue, 50%), .95)), url('/images/sprinkle-texture-dark.jpg');
-  @media screen and (max-width: $mq-max-sm) {
-    padding: 60px 0;
-  }
-  .col {
-    text-align: center;
-  }
-  h1 {
-    margin-bottom: 10px;
-    @media screen and (max-width: $mq-max-sm) {
-      max-width: 280px;
-      margin: 0 auto 10px;
-    }
-  }
-  p {
-    margin: 0 auto 40px;
-    max-width: 580px;
-  }
-  .form-wrapper {
-    max-width: 530px;
-    margin: auto;
-  }
-  ._form ._submit {
-    background: $black;
-    &:hover {
-      background: tint($black, 10%);
-    }
-  }
-}
-
-
-
-._form {
-  &.with-shadow {
-    ._form-content {
-      border-radius: 4px;
-      box-shadow: 0 12px 24px rgba(#3E4075, 0.5);
-      @media screen and (max-width: $mq-max-sm) {
-        box-shadow: unset;
-      }
-    }
-    ._form_element,
-    ._submit {
-      @media screen and (max-width: $mq-max-sm) {
-        box-shadow: 0 12px 24px rgba(#3E4075, 0.5);
-      }
-    }
-  }
-  ._form-content {
-    display: flex;
-    @media screen and (max-width: $mq-max-sm) {
-      flex-direction: column;
-    }
-  }
-  ._field-wrapper {
-    position: relative;
-    ._error {
-      background: $yellow;
-      border-radius: 4px;
-      padding: 15px 20px;
-      position: absolute;
-      right: 0;
-      bottom: -110%;
-    }
-    ._error-arrow {
-      width: 0;
-      height: 0;
-      position: absolute;
-      top: -7px;
-      transform: rotate(45deg);
-      z-index: 0;
-      left: 20px;
-      background: transparent;
-      border-top: 8px solid $yellow;
-      border-right: 8px solid transparent;
-      border-bottom: 8px solid transparent;
-      border-left: 8px solid $yellow;
-    }
-  }
-  input {
-    padding: 20px 20px;
-    width: 100%;
-    font-size: 18px;
-    font-family: $body-font;
-    line-height: 20px;
-    border-radius: 0;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    border: none;
-  }
-  
-  ._submit {
-    font-family: $body-font;
-    font-weight: 700;
-    font-size: 16px;
-    padding: 20px 20px;
-    line-height: 20px;
-    border-radius: 0;
-    border: none;
-    color: #fff;
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    background: $primary-btn-color;
-    transition: $btn-timing-function;
-    cursor: pointer;
-    @media screen and (max-width: $mq-max-sm) {
-      position: relative;
-      width: 100%;
-    }
-    &:hover {
-      background: $primary-btn-color-hover;
-    }
-  }
-  ._form_element {
-    margin: 0;
-    flex: 1;
-    @media screen and (max-width: $mq-max-sm) {
-      margin-bottom: 15px;
-    }
-    label {
-      display: none;
-    }
-  }
-  input,
-  ._submit {
-    @media screen and (max-width: $mq-max-sm) {
-      border-radius: 4px;
-    }
-  }
-}
-
-._form-thank-you {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: scale(0.8) translate(-50%, -50%);
-  padding: 60px 90px 80px;
-  background: #fff;
-  z-index: 100;
-  border-radius: 8px;
-  box-shadow: 0 20px 40px rgba(#383960, .3);
-  opacity: 0;
-  transform-origin: 0% 20%;
-  pointer-events: none;
-  transition: $btn-timing-function;
-  &.active {
-    opacity: 1;
-    pointer-events: auto;
-    transform: scale(1) translate(-50%, -50%);
-  }
-  h1, p {
-    color: $black;
-    text-align: center;
-  }
-  h1 {
-    margin-bottom: 30px;
-  }
-  .close-btn {
-    @include size(17px);
-    padding: 20px;
-    box-sizing: content-box;
-    position: absolute;
-    cursor: pointer;
-    transition: $btn-timing-function;
-    top: 0;
-    right: 0;
-    &:after,
-    &:before {
-      content:'';
-      width: 21px;
-      height: 4px;
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform-origin: 0% 0%;
-      transform: rotate(-45deg) translate(-50%, -50%);
-      background: $black;
-    }
-    &:after {
-      transform: rotate(45deg) translate(-50%, -50%);
-    }
-    &:hover {
-      opacity: 0.5;
-    }
-  }
-  .lottie-check-mark {
-    @include size(160px);
-    margin: auto;
   }
 }
