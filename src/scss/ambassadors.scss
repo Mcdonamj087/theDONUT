@@ -1,22 +1,21 @@
 @import '../../node_modules/bourbon/core/bourbon';
 
 // ==========================================
-//  GLOBALS 
+//  GLOBALS
 // ==========================================
 @import 'partials/globals/reset';
 @import 'partials/globals/variables';
 @import 'partials/globals/global';
-@import 'partials/globals/cm-forms';
-
-
-// ==========================================
-//  MODULES 
-// ==========================================
-@import 'partials/modules/header';
-@import 'partials/modules/footer';
+@import 'partials/globals/single-input-form';
 
 // ==========================================
-//  PAGES 
+//  MODULES
+// ==========================================
+@import 'partials/components/header';
+@import 'partials/components/footer';
+
+// ==========================================
+//  PAGES
 // ==========================================
 @import 'partials/ambassadors';
 @import 'partials/ambassadors-refer';

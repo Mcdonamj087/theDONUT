@@ -15,16 +15,15 @@
   .logo {
     max-width: 185px;
     margin-bottom: 70px;
-    @media screen and (max-width: $mq-max-sm) {
+    @include breakpoint('sm') {
       max-width: 148px;
       margin-bottom: 50px;
     }
   }
 }
 
-
 .about-ingredients {
-  background: $lighter-black;
+  background: $soft-black;
   padding-bottom: 80px;
   .ingredients-excerpt {
     text-align: center;
@@ -36,7 +35,7 @@
     display: flex;
     margin-bottom: 60px;
     align-items: flex-start;
-    @media screen and (max-width: $mq-max-sm) {
+    @include breakpoint('sm') {
       flex-direction: column;
       text-align: center;
       align-items: center;
@@ -47,7 +46,7 @@
     }
     .ingredient-content {
       margin-left: 30px;
-      @media screen and (max-width: $mq-max-sm) {
+      @include breakpoint('sm') {
         margin-left: 0;
         margin-top: 20px;
       }

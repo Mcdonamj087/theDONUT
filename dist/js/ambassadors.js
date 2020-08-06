@@ -1,7 +1,7 @@
 /*!
  * donut-website v0.0.1
  * A description for your project.
- * (c) 2019 
+ * (c) 2020 
  * MIT License
  * http://link-to-your-git-repo.com
  */
@@ -21,7 +21,7 @@ function getSubscriber(email){
   const settings = {
     "async": true,
     "crossDomain": true,
-    "url": "https://thedonut.co/wp-content/themes/theDONUT/php/campaignmonitor-createsend-php-v6.0.1/requests/get.php",
+    "url": "http://localhost:3000/php/campaignmonitor-createsend-php-v6.0.1/requests/get.php",
     "method": "POST",
     "processData": false,
     "contentType": false,
@@ -71,13 +71,13 @@ formSubmit.addEventListener('click', (function(e) {
     }, (function() {
 
       if(alreadySubscribed === true) {
-        window.location.href = 'https://thedonut.co/wp-content/themes/theDONUT/ambassadors-refer-a-friend.html';
+        window.location.href = 'http://localhost:3000/ambassadors-refer-a-friend.html';
       } else {
-        window.location.href = 'https://thedonut.co/wp-content/themes/theDONUT/welcome.html';
+        window.location.href = 'http://localhost:3000/welcome.html';
       }
 
       // Redirect to refer-a-friend page
-      // window.location.href = 'https://thedonut.co/wp-content/themes/theDONUT/ambassadors-refer-a-friend.html';
+      // window.location.href = 'http://localhost:3000/ambassadors-refer-a-friend.html';
     }));
     
   } else {

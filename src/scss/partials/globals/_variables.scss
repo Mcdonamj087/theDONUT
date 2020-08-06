@@ -1,102 +1,45 @@
 // Colors
 ///////////////////////////////////////////////
-$black: #1A1418;
-$lighter-black: #2E2329;
-$cream: #FFFCE9;
-$periwinkle: #4C51F0;
-$pink: #F84FAA;
-$green: #50E3C2;
-$lightblue: #31C9FF;
-$chocolate: #6C3C31;
-$yellow: #EBBC60;
-
-
+$black: #1a1418;
+$soft-black: #2e2329;
+$bright-black: #3f343a;
+$cream: #fffce9;
+$periwinkle: #4c51f0;
+$pink: #f84faa;
+$green: #50e3c2;
+$sky: #31c9ff;
+$chocolate: #6c3c31;
+$schoolbus: #fcb52b;
+$hotbutton: #e45e4e;
+$dough: #ebbc60;
 
 // Typography
 ///////////////////////////////////////////////
 $body-font: 'Poppins', sans-serif;
 $heading-font: $body-font;
 
-$text-color: $black;
-$link-color: $pink;
-
-
-// Desktop Heading Styles
-$h1: 36px; $h1-lh: 48px;
-$h2: 28px; $h2-lh: 38px;
-$h3: 24px; $h3-lh: 34px;
-$h4: 20px; $h4-lh: 30px;
-$h5: 16px; $h5-lh: 24px;
-$h6: 12px; $h6-lh: 16px;
-
-$h1-lg: 44px;
-$h1-lg-lh: 56px;
-
-$h1-lg-tablet: 40px;
-$h1-lg-lh-tablet: 42px;
-
-$h1-lg-mobile: $h1;
-$h1-lg-lh-mobile: $h1-lh;
-
-// Tablet Heading Styles
-$h1-tablet: 32px;
-$h1-lh-tablet: 46px;
-
-// Mobile Heading Styles
-$h1-mobile: $h2;
-$h1-lh-mobile: $h2-lh;
-
-// Desktop Paragraph Styles
-$p: 16px;
-$p-lh: 26px;
-
-$p-sm: 14px;
-$p-sm-lh: 27px;
-
-$p-md: 18px;
-$p-md-lh: 26px;
-
-$p-lg: 24px;
-$p-lg-lh: 36px;
-
-
-// Mobile Paragraph Styles
-$p-lg-tablet: 22px;
-$p-lg-lh-tablet: 32px;
-
-
-// Mobile Paragraph Styles
-$p-lg-mobile: 20px;
-$p-lg-lh-mobile: 28px;
-
-
 // Buttons
 ///////////////////////////////////////////////
-$btn-height: 60px;
+$btn-height-lg: 60px;
+$btn-height: 44px;
+$btn-height-sm: 38px;
 $btn-stroke-width: 2px;
 
 $primary-btn-color: $pink;
 $primary-btn-color-hover: shade($primary-btn-color, 30%);
 
-$btn-font-size: 16px;
-$btn-font-weight: 700;
-
 $secondary-btn-color: $periwinkle;
 $secondary-btn-color-hover: shade($secondary-btn-color, 30%);
 
 $btn-border-radius: 4px;
-$btn-timing-function: 0.2s cubic-bezier(0.0, 0.0, 0.2, 1);
-
-
+$btn-timing-function: 0.2s cubic-bezier(0, 0, 0.2, 1);
 
 // Header
 ///////////////////////////////////////////////
 $header-height: 100px;
 $header-height-mobile: 60px;
 
-
-
-// Bootstrap Breakpoints 
+// Bootstrap Breakpoints
 ///////////////////////////////////////////////
 $mq-min-xl: 1200px;
 $mq-min-lg: 992px;
@@ -109,3 +52,43 @@ $mq-max-lg: ($mq-min-lg - 1);
 $mq-max-md: ($mq-min-md - 1);
 $mq-max-sm: ($mq-min-sm - 1);
 
+@mixin breakpoint($size, $max: false) {
+  @if $size == 'sm' {
+    $breakpoint: 575 !global;
+  }
+  @if $size == 'md' {
+    $breakpoint: 768 !global;
+  }
+  @if $size == 'lg' {
+    $breakpoint: 992 !global;
+  }
+  @if $size == 'xl' {
+    $breakpoint: 1200 !global;
+  }
+  @if type-of($size) == 'number' {
+    $breakpoint: $size !global;
+  }
+
+  @if $size !=
+    'sm' and
+    $size !=
+    'md' and
+    $size !=
+    'lg' and
+    $size !=
+    'xl' and
+    type-of($size) !=
+    'number'
+  {
+    @error "Property #{$size} must equal to 'sm', 'md', 'lg', or 'lx' OR you can use a number to specify a custom breakpoint";
+  }
+  @if $max {
+    @media screen and (max-width: $breakpoint - 1 + 'px') {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $breakpoint + 'px') {
+      @content;
+    }
+  }
+}

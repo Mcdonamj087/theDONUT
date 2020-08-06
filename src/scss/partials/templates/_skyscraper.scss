@@ -5,9 +5,18 @@
 section.skyscraper {
   padding: 160px 0 100px;
   &.dark {
-    background: $lighter-black;
+    background: $soft-black;
   }
-  h1, h2, h3, h4, h5, h6, p, ul, ol, li {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul,
+  ol,
+  li {
     color: #fff;
   }
   .skyscraper-container {
@@ -23,6 +32,5 @@ section.skyscraper {
   }
   p {
     margin-bottom: 20px;
-    
   }
 }

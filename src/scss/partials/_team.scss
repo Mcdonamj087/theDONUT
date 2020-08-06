@@ -7,7 +7,7 @@
   padding-bottom: 280px;
   text-align: center;
   position: relative;
-  @media screen and (max-width: $mq-max-xl) {
+  @include breakpoint('xl') {
     padding-bottom: 260px;
   }
 }
@@ -15,7 +15,7 @@
 .team-headshots {
   margin-top: -170px;
   padding-bottom: 120px;
-  @media screen and (max-width: $mq-max-xl) {
+  @include breakpoint('xl') {
     margin-top: -150px;
   }
 }
@@ -25,16 +25,16 @@
   max-width: 249px; // 4-column
   margin: 0 auto 40px;
   text-align: center;
-  @media screen and (max-width: $mq-max-xl) {
+  @include breakpoint('xl') {
     // max-width: 260px; // 3-column
   }
-  @media screen and (max-width: $mq-max-lg) {
+  @include breakpoint('lg') {
     max-width: 280px;
   }
-  @media screen and (max-width: $mq-max-md) {
+  @include breakpoint('md') {
     max-width: 230px;
   }
-  @media screen and (max-width: $mq-max-sm) {
+  @include breakpoint('sm') {
     max-width: 280px;
   }
   .headshot-wrap {

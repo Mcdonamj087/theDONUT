@@ -7,7 +7,7 @@
   background-size: 330px;
   position: relative;
   padding: 160px 0 190px;
-  @media screen and (max-width: $mq-max-sm) {
+  @include breakpoint('sm') {
     padding-top: 110px;
   }
   &:before {
@@ -18,8 +18,8 @@
     right: 0;
     top: 0;
     bottom: 0;
-    background: linear-gradient(45deg, #A4FBE7, #E0FAFF);
-    opacity: .96;
+    background: linear-gradient(45deg, #a4fbe7, #e0faff);
+    opacity: 0.96;
   }
   h1 {
     margin-bottom: 25px;
@@ -29,7 +29,7 @@
   }
   p.large {
     margin-bottom: 60px;
-    @media screen and (max-width: $mq-max-sm) {
+    @include breakpoint('sm') {
       margin-bottom: 30px;
     }
   }
@@ -39,7 +39,7 @@
     display: flex;
     justify-content: space-between;
     text-align: center;
-    
+
     .step {
       max-width: 160px;
     }
@@ -52,8 +52,8 @@
       line-height: 22px;
       font-weight: 700;
       margin: 0 auto 15px;
-      box-shadow: 0 22px 44px rgba(60, 61, 93, .23);
-      @media screen and (max-width: $mq-max-sm) {
+      box-shadow: 0 22px 44px rgba(60, 61, 93, 0.23);
+      @include breakpoint('sm') {
         @include size(55px);
         font-size: 26px;
       }
@@ -61,7 +61,7 @@
     p {
       font-weight: 700;
       line-height: 22px;
-      @media screen and (max-width: $mq-max-sm) {
+      @include breakpoint('sm') {
         font-size: 14px;
         line-height: 22px;
       }
@@ -75,10 +75,9 @@
   min-height: 250px;
   margin: auto;
   border-radius: 10px;
-  box-shadow: 0 22px 44px rgba(60, 61, 93, .23);
+  box-shadow: 0 22px 44px rgba(60, 61, 93, 0.23);
   padding: 35px;
 }
-
 
 .count-and-rewards {
   margin-top: -120px;

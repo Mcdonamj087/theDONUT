@@ -8,12 +8,12 @@
 .todays-donut-newsletter {
   max-width: 750px;
   margin: auto;
-  background: #ECECEC;
+  background: #ececec;
   padding: 120px 0 60px;
   transform: translateY(-160px);
-  box-shadow: 0 22px 44px rgba(#3C3D5D, .4);
+  box-shadow: 0 22px 44px rgba(#3c3d5d, 0.4);
   position: relative;
-  @media screen and (max-width: $mq-max-sm) {
+  @include breakpoint('sm') {
     transform: translateY(-180px);
   }
   .date-bubble {
@@ -21,8 +21,8 @@
     top: -80px;
     left: 50%;
     transform: translateX(-50%);
-    @media screen and (max-width: $mq-max-sm) {
-      transform: translateX(-50%) scale(.8);
+    @include breakpoint('sm') {
+      transform: translateX(-50%) scale(0.8);
     }
   }
 }

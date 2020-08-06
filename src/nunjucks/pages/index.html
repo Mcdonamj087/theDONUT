@@ -9,19 +9,16 @@
 <section class="homepage-hero">
 	<div class="container">
 		<div class="row">
-			<div class="col white-text">
-				<a class="logo" href="{{ pages.home.slug }}">
-					<!-- <img src="{{root_url}}/svg/donut-logo-vertical.svg"> -->
-					<div class="logo-animation"></div>
+			<div class="col">
+				<a class="logo" href="/">
+					<div class="lottie-wrapper"></div>
 				</a>
-				<div class="text-wrapper">
-					<h1 class="large">Say goodbye to news anxiety.</h1>
-					<p class="large">Join the community of empowered news consumers who start the day with our email — positive vibes included.</p>
+				<div class="content">
+					<h1 class="large headline">Get the FREE daily email that's changing the way people feel about news.</h1>
+					<p class="large subtext">Fact-only summaries with a 360° view of what the media is saying.<br> A Dose of Positive with every email (because the world truly needs it).</p>
 				</div>
-				
-				<div class="ctas">
-
-					<form id="subForm" class="js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E905619D46C578C13DDFF6441C6635407B1C0360BB5CEF4218B8BC89D7C6A17877B09FDE6B1E1C65BFD365D419599279E726665">   
+				<div class="form-wrapper">
+					<form id="subForm" class="single-input-form js-cm-form" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="2BE4EF332AA2E32596E38B640E905619D46C578C13DDFF6441C6635407B1C0360BB5CEF4218B8BC89D7C6A17877B09FDE6B1E1C65BFD365D419599279E726665">
 						<div class="form-content">
 							<div class="field-wrapper">
 								<!-- <label for="fieldEmail">Email</label> -->
@@ -30,59 +27,58 @@
 								<input id="fieldykqhyi" name="cm-f-ykqhyi" type="hidden" /> <!-- Custom field input for capturing UTM Campaign -->
 								<input id="fieldykfdjl" name="cm-f-ykfdjl" type="hidden" /> <!-- Custom field for referral URL if UTM values are null -->
 							</div>
-							
+
 							<div class="button-wrapper">
 								<button class="js-cm-submit-button" type="submit">Subscribe</button>
 							</div>
 						</div>
 					</form>
-
-
+				</div>
+				<p class="form-caption">Still not convinced? Check out the <a href="latest.html">latest newsletter</a></p>
 			</div>
 		</div>
-	</div>
 </section>
 
-<section class="homepage-about-section flex">
-	<div class="donut-ingredients half-col">
-		<a href="{{ pages.about.slug }}">
+<section class="homepage-about-plank">
+	<div class="ingredients half">
+		<a href="about.html">
 			<div class="inner">
 				<h1>the DONUT* Ingredients</h1>
 				<div class="ingredients-wrapper">
 					<div class="ingredient">
-						<img src="{{root_url}}/svg/icon-lightbulb.svg">
-						<p>Fact-based News</p>
+						<img class="icon" src="svg/icon-lightbulb.svg">
+						<p class="medium">Fact-based News</p>
 					</div>
 					<div class="ingredient">
-						<img src="{{root_url}}/svg/icon-opinion-free.svg">
-						<p>Opinion-free information</p>
+						<img class="icon" src="svg/icon-opinion-free.svg">
+						<p class="medium">Opinion-free information</p>
 					</div>
 					<div class="ingredient">
-						<img src="{{root_url}}/svg/icon-360.svg">
-						<p>Equal representation on the issues</p>
+						<img class="icon" src="svg/icon-360.svg">
+						<p class="medium">Equal representation on the issues</p>
 					</div>
 					<div class="ingredient">
-						<img src="{{root_url}}/svg/icon-positivity.svg">
-						<p>Relentless positivity</p>
+						<img class="icon" src="svg/icon-positivity.svg">
+						<p class="medium">Relentless positivity</p>
 					</div>
 				</div>
 				<h4>* served to your inbox daily</h4>
 			</div>
 		</a>
 	</div>
-	<div class="donut-mockup half-col"></div>
+	<div class="mockup half"></div>
 </section>
 
-<section class="homepage-quote-section flex">
-	<div class="quotes half-col">
+<section class="homepage-quote-section">
+	<div class="quotes half">
 		<div class="quote-carousel">
 
 			<div class="quote-wrapper">
 				<div class="quote-box">
 					<div class="quote-marks">
-						<img src="{{root_url}}/svg/quote-marks.svg">
+						<img src="svg/quote-marks.svg">
 					</div>
-					<p class="quote">I think staying informed is paramount. I used to spend a lot of time searching multiple publications b/c I’ve always recognized that both sides lean to fit a specific narrative, and the more I know, the better I’ll be able to form my own opinion vs the standard “herd mentality"</p>
+					<p class="quote">"Staying informed these days isn’t optional – it’s essential. The DONUT shows me multiple sides of a story so I don’t waste time searching."</p>
 					<p class="attribution">- Time conscious subscriber</p>
 				</div>
 			</div>
@@ -90,9 +86,9 @@
 			<div class="quote-wrapper">
 				<div class="quote-box">
 					<div class="quote-marks">
-						<img src="{{root_url}}/svg/quote-marks.svg">
+						<img src="svg/quote-marks.svg">
 					</div>
-					<p class="quote">Finally…a company involved in politics that doesn’t pick a side and gives you all the information you need to form your own opinion.</p>
+					<p class="quote">"I’ve been searching for a news source that doesn’t pick a side. FINALLY I found the DONUT and I can form my own opinion."</p>
 					<p class="attribution">- Free thinking subscriber</p>
 				</div>
 			</div>
@@ -100,9 +96,9 @@
 			<div class="quote-wrapper">
 				<div class="quote-box">
 					<div class="quote-marks">
-						<img src="{{root_url}}/svg/quote-marks.svg">
+						<img src="svg/quote-marks.svg">
 					</div>
-					<p class="quote">Imagine if you could open your email every morning to read the news, get the major headlines out of the way and then be able to dig deeper for a better understanding to flex on your friends with how well informed you sound regardless of your political affiliation... or lack there of.</p>
+					<p class="quote">"There’s nothing like getting the day’s biggest stories sent directly to me every morning. I’m always the one in my friend group who really knows what’s up."</p>
 					<p class="attribution">- Continuously flexing subscriber</p>
 				</div>
 			</div>
@@ -110,9 +106,9 @@
 			<div class="quote-wrapper">
 				<div class="quote-box">
 					<div class="quote-marks">
-						<img src="{{root_url}}/svg/quote-marks.svg">
+						<img src="svg/quote-marks.svg">
 					</div>
-					<p class="quote">Consuming “big box” news today has become exhausting. Can I get an AMEN?! The past few years I have found myself starting to ignore political news all together. The DONUT allows me to view the full scope of a topic while displaying positivity.</p>
+					<p class="quote">"I’ve been dodging political news for a long time. It’s just exhausting. But the DONUT showed me I really can stay in-the-know without all the obnoxious bias."</p>
 					<p class="attribution">- Formerly exhausted subscriber</p>
 				</div>
 			</div>
@@ -120,24 +116,23 @@
 			<div class="quote-wrapper">
 				<div class="quote-box">
 					<div class="quote-marks">
-						<img src="{{root_url}}/svg/quote-marks.svg">
+						<img src="svg/quote-marks.svg">
 					</div>
-					<p class="quote">The Daily DONUT is a game changer. I can get informed on what’s going on in the world without any negative or twisted spin. It actually makes the news fun again.</p>
-					<p class="attribution">-Fun loving subscriber</p>
+					<p class="quote">"The Daily DONUT is a game changer. I can get informed on what’s going on in the world without any negative or twisted spin. It actually makes the news fun again."</p>
+					<p class="attribution">- Fun loving subscriber</p>
 				</div>
 			</div>
 
-	
 		</div>
 		<div class="quote-pagination"></div>
 	</div>
 
-	<div class="tagline-spinner half-col">
+	<div class="tagline-spinner half">
 		<div class="tagline-spinner--shell">
-			<img id="tagline-spinner-outer" src="{{root_url}}/svg/tagline-spinner-outer.svg">
+			<img id="tagline-spinner-outer" src="svg/tagline-spinner-outer.svg">
 			<div class="tagline-spinner-middle-band"></div>
-			<img id="tagline-spinner-inner" src="{{root_url}}/svg/tagline-spinner-inner.svg">
-			<img id="tagline-spinner-donut" src="{{root_url}}/svg/tagline-spinner-donut.svg">
+			<img id="tagline-spinner-inner" src="svg/tagline-spinner-inner.svg">
+			<img id="tagline-spinner-donut" src="svg/tagline-spinner-donut.svg">
 		</div>
 	</div>
 </section>
@@ -146,5 +141,5 @@
 
 
 {% include "partials/footer.html" %}
-	
+
 {% endblock %}

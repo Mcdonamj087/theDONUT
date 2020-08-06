@@ -6,112 +6,155 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-color;
+  color: $black;
 }
 
-h1, h2, h3, h4, h5, h6 { 
-  color: $text-color;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $black;
   font-family: $heading-font;
   font-weight: 700;
 }
 
 h1 {
-  font-size: $h1;
-  line-height: $h1-lh;
-  &.large {
-    font-size: $h1-lg;
-    line-height: $h1-lg-lh;
-    @media screen and (max-width: $mq-max-md) {
-      font-size: $h1-lg-tablet;
-      line-height: $h1-lg-lh-tablet;
-    }
-    @media screen and (max-width: $mq-max-sm) {
-      font-size: $h1-lg-mobile;
-      line-height: $h1-lg-lh-mobile;
-    }
-  }
-  @media screen and (max-width: $mq-max-md) {
-    font-size: $h1-tablet;
-    line-height: $h1-lh-tablet;
-  }
-  @media screen and (max-width: $mq-max-sm) {
-    font-size: $h1-mobile;
-    line-height: $h1-lh-mobile
-  }
-}
-h2 {
-  font-size: $h2;
-  line-height: $h2-lh;
+  font-size: 36px;
+  line-height: 48px;
 
+  &.large {
+    font-size: 44px;
+    line-height: 54px;
+
+    @media screen and (max-width: $mq-max-md) {
+      font-size: 40px;
+      line-height: 42px;
+    }
+
+    @media screen and (max-width: $mq-max-sm) {
+      font-size: 36px;
+      line-height: 48px;
+    }
+  }
+
+  &.display {
+    font-size: 50px;
+    line-height: 56px;
+
+    @media screen and (max-width: $mq-max-md) {
+      font-size: 44px;
+      line-height: 54px;
+    }
+
+    @media screen and (max-width: $mq-max-sm) {
+      font-size: 40px;
+      line-height: 42px;
+    }
+  }
+
+  @media screen and (max-width: $mq-max-md) {
+    font-size: 32px;
+    line-height: 46px;
+  }
+
+  @media screen and (max-width: $mq-max-sm) {
+    font-size: 28px;
+    line-height: 38px;
+  }
 }
+
+h2 {
+  font-size: 28px;
+  line-height: 38px;
+}
+
 h3 {
-  font-size: $h3;
-  line-height: $h3-lh;
+  font-size: 24px;
+  line-height: 34px;
 }
+
 h4 {
-  font-size: $h4;
-  line-height: $h4-lh;
+  font-size: 20px;
+  line-height: 30px;
 }
+
 h5 {
-  font-size: $h5;
-  line-height: $h5-lh;
+  font-size: 16px;
+  line-height: 24px;
   letter-spacing: 1.8px;
   text-transform: uppercase;
 }
+
 h6 {
-  font-size: $h6;
-  line-height: $h6-lh;
+  font-size: 12px;
+  line-height: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
 
-p, li {
-  font-size: $p;
-  line-height: $p-lh;
+p,
+li {
+  font-size: 16px;
+  line-height: 26px;
+
   &.small {
-    font-size: $p-sm;
-    line-height: $p-sm-lh;
+    font-size: 14px;
+    line-height: 27px;
   }
+
   &.medium {
-    font-size: $p-md;
-    line-height: $p-md-lh;
+    font-size: 18px;
+    line-height: 26px;
   }
+
   &.large {
-    font-size: $p-lg;
-    line-height: $p-lg-lh;
+    font-size: 24px;
+    line-height: 36px;
+
     @media screen and (max-width: $mq-max-md) {
-      font-size: $p-lg-tablet;
-      line-height: $p-lg-lh-tablet;
+      font-size: 22px;
+      line-height: 32px;
     }
+
     @media screen and (max-width: $mq-max-sm) {
-      font-size: $p-lg-mobile;
-      line-height: $p-lg-lh-mobile;
+      font-size: 20px;
+      line-height: 28px;
     }
   }
 }
 
-
-
-em, i {
+em,
+i {
   font-style: italic;
 }
 
 .white-text {
-  h1,h2,h3,h4,h5,h6,p {
-    color: #FFF;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    color: #fff;
   }
-
 }
 
 a {
-	color: $link-color;
+  color: $pink;
 }
 
-strong, b { font-weight: 600 }
+strong,
+b {
+  font-weight: 600;
+}
 
 ul {
   padding-left: 40px;
   list-style: disc;
+
   li {
     padding-left: 10px;
     margin-bottom: 20px;
@@ -123,10 +166,10 @@ ul {
   position: relative;
   color: #fff;
   background: $primary-btn-color;
-  border: $btn-stroke-width solid $primary-btn-color;
-  font-size: $btn-font-size;
-  line-height: $btn-height - ($btn-stroke-width * 2);
-  font-weight: $btn-font-weight;
+  box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color;
+  font-size: 14px;
+  line-height: $btn-height;
+  font-weight: 700;
   text-align: center;
   padding: 0px 25px;
   border-radius: $btn-border-radius;
@@ -134,33 +177,41 @@ ul {
   z-index: 1;
   cursor: pointer;
   transition: $btn-timing-function;
+  transition-property: box-shadow, color, background;
   text-decoration: none;
+
   &:hover {
     background: $primary-btn-color-hover;
-    border-color: $primary-btn-color-hover;
+    box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color-hover;
   }
+
   &.stroke {
-  	background: transparent;
-  	color: $primary-btn-color;
-  	&:hover {
-  		background: $primary-btn-color;
-  		border-color: $primary-btn-color;
+    background: transparent;
+    color: $primary-btn-color;
+
+    &:hover {
+      background: $primary-btn-color;
+      box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color;
       color: #fff;
+
       svg path {
-        stroke: #FFF;
+        stroke: #fff;
       }
     }
+
     &.white {
-      border-color: #FFF;
+      box-shadow: inset 0 0 0 $btn-stroke-width #fff;
       color: #fff;
+
       &:hover {
-        background: #FFF;
+        background: #fff;
         color: $black;
       }
     }
     &.black {
-      border-color: $black;
+      box-shadow: inset 0 0 0 $btn-stroke-width $black;
       color: $black;
+
       &:hover {
         background: $black;
         color: #fff;
@@ -168,41 +219,49 @@ ul {
     }
   }
 
-  &+ .btn {
-    margin-left: 14px;
+  & + .btn {
+    margin-left: 16px;
   }
 
   &.btn-small {
-    line-height: 40px;
+    line-height: $btn-height-sm;
     font-size: 14px;
   }
 
+  &.btn-large {
+    line-height: $btn-height-lg;
+    font-size: 16px;
+  }
+
   &.btn-secondary {
-  	background: $secondary-btn-color;
+    background: $secondary-btn-color;
     border-color: $secondary-btn-color;
     color: #fff;
+
     &:hover {
       background: $secondary-btn-color-hover;
-      border-color: $secondary-btn-color-hover;
+      box-shadow: inset 0 0 0 $btn-stroke-width $secondary-btn-color-hover;
       color: #fff;
     }
+
     &.stroke {
-			background: transparent;
-			color: $secondary-btn-color;
-			&:hover {
-				border-color: $secondary-btn-color;
-				background: $secondary-btn-color;
-				color: #fff;
-			}
+      background: transparent;
+      color: $secondary-btn-color;
+
+      &:hover {
+        box-shadow: inset 0 0 0 $btn-stroke-width $secondary-btn-color;
+        background: $secondary-btn-color;
+        color: #fff;
+      }
     }
   }
 }
 
 .chevron-arrow-right:after {
-  content:'';
+  content: '';
   display: inline-block;
-  border-right: 2px solid $text-color;
-  border-bottom: 2px solid $text-color;
+  border-right: 2px solid $black;
+  border-bottom: 2px solid $black;
   @include size(6px);
   transform: rotate(45deg) translateY(-3px);
   margin-left: 5px;
@@ -211,10 +270,10 @@ ul {
 .wrapper {
   overflow: hidden;
   position: relative;
-	// margin-top: $header-height;
-	// @media screen and (max-width: $mq-max-lg) {
-	// 	margin-top: $header-height-mobile;
-	// }
+  // margin-top: $header-height;
+  // @media screen and (max-width: $mq-max-lg) {
+  // 	margin-top: $header-height-mobile;
+  // }
 }
 
 .padding-100 {
@@ -313,10 +372,10 @@ img.adapt {
       background: $periwinkle;
     }
     &.twit:hover {
-      background: $lightblue;
+      background: $sky;
     }
     &.linkedin:hover {
-      background: #2F85FF;
+      background: #2f85ff;
     }
     &.insta:hover {
       background: $pink;
@@ -328,12 +387,20 @@ img.adapt {
 }
 
 @keyframes donut-loader-inner {
-  0% { transform: rotateZ(0deg) }
-  100% { transform: rotateZ(360deg) }
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
 }
 @keyframes donut-loader-outer {
-  0% { transform: rotateZ(0deg) }
-  100% { transform: rotateZ(-360deg) }
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(-360deg);
+  }
 }
 
 #donut-loader {
@@ -341,12 +408,12 @@ img.adapt {
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: scale(.8) translate(-50%, -50%);
+  transform: scale(0.8) translate(-50%, -50%);
   transform-origin: 0% 0%;
   background: $black;
   z-index: 100;
   border-radius: 50%;
-  box-shadow: 0 22px 24px rgba($black, .4);
+  box-shadow: 0 22px 24px rgba($black, 0.4);
   opacity: 0;
   pointer-events: none;
   will-change: transform;
@@ -356,7 +423,7 @@ img.adapt {
     will-change: transform;
   }
   &.active {
-    transition: 1s cubic-bezier(.33,.1,.05,.99);
+    transition: 1s cubic-bezier(0.33, 0.1, 0.05, 0.99);
     opacity: 1;
     transform: scale(1) translate(-50%, -50%);
     .inner {
@@ -371,7 +438,7 @@ img.adapt {
 .spacer-40 {
   height: 40px;
   @media screen and (max-width: $mq-max-sm) {
-    height:30px;
+    height: 30px;
   }
 }
 

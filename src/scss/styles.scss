@@ -1,32 +1,30 @@
 @import '../../node_modules/bourbon/core/bourbon';
 
 // ==========================================
-//  GLOBALS 
+//  GLOBALS
 // ==========================================
 @import 'partials/globals/reset';
 @import 'partials/globals/variables';
 @import 'partials/globals/global';
-@import 'partials/globals/cm-forms';
-
-
-// ==========================================
-//  MODULES 
-// ==========================================
-@import 'partials/modules/header';
-@import 'partials/modules/footer';
-@import 'partials/modules/date-bubbles';
-@import 'partials/modules/sprinkle-hero';
-@import 'partials/modules/stale-donut-cards';
-@import 'partials/modules/footer-subscribe';
-
+@import 'partials/globals/single-input-form';
 
 // ==========================================
-//  TEMPLATES 
+//  COMPONENTS
+// ==========================================
+@import 'partials/components/header';
+@import 'partials/components/footer';
+@import 'partials/components/date-bubbles';
+@import 'partials/components/sprinkle-hero';
+@import 'partials/components/stale-donut-cards';
+@import 'partials/components/footer-subscribe';
+
+// ==========================================
+//  TEMPLATES
 // ==========================================
 @import 'partials/templates/skyscraper';
 
 // ==========================================
-//  PAGES 
+//  PAGES
 // ==========================================
 @import 'partials/homepage';
 @import 'partials/welcome';
@@ -34,5 +32,3 @@
 @import 'partials/team';
 @import 'partials/latest';
 @import 'partials/archives';
-
-
