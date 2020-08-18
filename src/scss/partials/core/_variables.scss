@@ -39,8 +39,6 @@ $btn-timing-function: 0.2s cubic-bezier(0, 0, 0.2, 1);
 $header-height: 100px;
 $header-height-mobile: 60px;
 
-// Bootstrap Breakpoints
-///////////////////////////////////////////////
 $mq-min-xl: 1200px;
 $mq-min-lg: 992px;
 $mq-min-md: 768px;
@@ -51,44 +49,3 @@ $mq-max-xl: ($mq-min-xl - 1);
 $mq-max-lg: ($mq-min-lg - 1);
 $mq-max-md: ($mq-min-md - 1);
 $mq-max-sm: ($mq-min-sm - 1);
-
-@mixin breakpoint($size, $max: false) {
-  @if $size == 'sm' {
-    $breakpoint: 575 !global;
-  }
-  @if $size == 'md' {
-    $breakpoint: 768 !global;
-  }
-  @if $size == 'lg' {
-    $breakpoint: 992 !global;
-  }
-  @if $size == 'xl' {
-    $breakpoint: 1200 !global;
-  }
-  @if type-of($size) == 'number' {
-    $breakpoint: $size !global;
-  }
-
-  @if $size !=
-    'sm' and
-    $size !=
-    'md' and
-    $size !=
-    'lg' and
-    $size !=
-    'xl' and
-    type-of($size) !=
-    'number'
-  {
-    @error "Property #{$size} must equal to 'sm', 'md', 'lg', or 'lx' OR you can use a number to specify a custom breakpoint";
-  }
-  @if $max {
-    @media screen and (max-width: $breakpoint - 1 + 'px') {
-      @content;
-    }
-  } @else {
-    @media screen and (min-width: $breakpoint + 'px') {
-      @content;
-    }
-  }
-}

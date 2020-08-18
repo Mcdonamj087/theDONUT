@@ -1,0 +1,29 @@
+.social-links {
+  margin-left: -7px;
+  margin-right: -7px;
+  display: flex;
+  a {
+    background: #353334;
+    transition: $btn-timing-function;
+    display: block;
+    float: left;
+    @include size(50px);
+    margin: 0 7px;
+    border-radius: 50%;
+    &.fb:hover {
+      background: $periwinkle;
+    }
+    &.twit:hover {
+      background: $sky;
+    }
+    &.linkedin:hover {
+      background: #2f85ff;
+    }
+    &.insta:hover {
+      background: $pink;
+    }
+    &.email:hover {
+      background: $chocolate;
+    }
+  }
+}

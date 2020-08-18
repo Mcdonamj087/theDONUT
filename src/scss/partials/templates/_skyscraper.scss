@@ -2,35 +2,20 @@
  Global Template - Skyscraper
 **********************************************/
 
-section.skyscraper {
-  padding: 160px 0 100px;
-  &.dark {
-    background: $soft-black;
+.skyscraper-container {
+  max-width: 630px;
+  margin: auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 30px;
+
+  [class^='col-'] {
+    min-width: 0;
+    min-height: 0;
   }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  ul,
-  ol,
-  li {
-    color: #fff;
-  }
-  .skyscraper-container {
-    max-width: 540px;
-    margin: auto;
-    padding: 0 15px;
-  }
-  h1.large {
-    margin-bottom: 40px;
-  }
-  h2 {
-    margin-bottom: 20px;
-  }
-  p {
-    margin-bottom: 20px;
+
+  .col-full {
+    grid-column: 1 / -1;
   }
 }

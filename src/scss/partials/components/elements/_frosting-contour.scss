@@ -1,0 +1,18 @@
+.frosting-contour {
+  @include position(absolute, null 0 -1px 50%);
+  width: 100%;
+  min-width: 800px;
+  transform: translateX(-50%);
+
+  @include breakpoint(sm) {
+    min-width: 1000px;
+  }
+
+  @include breakpoint(md) {
+    min-width: 1200px;
+  }
+
+  @include breakpoint(lg) {
+    min-width: 1440px;
+  }
+}

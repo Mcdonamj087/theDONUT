@@ -1,0 +1,7 @@
+@function adapt_text($color) {
+  @if lightness($color) > 50 {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
+}

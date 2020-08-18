@@ -4,17 +4,17 @@
 
 {% block content %}
 
-{% include "partials/header.html" %}
+{% include "sections/header.html" %}
 
 <section class="sprinkle-hero periwinkle">
 	<div class="container">
 		<div class="row">
 			<div class="col white-text">
-        <h1 class="large">Stale DONUTs</h1>
+				<h1 class="large">Stale DONUTs</h1>
 			</div>
 		</div>
 	</div>
-<img class="section-contour-bottom" src="{{root_url}}/svg/frosting-contour-white.svg">
+	<img class="section-contour-bottom" src="{{root_url}}/svg/frosting-contour-white.svg">
 </section>
 
 <section class="stale-donuts">
@@ -39,7 +39,11 @@
 					<div class="bottom">
 						<h4 class="title">{{donut.title}}</h4>
 						<p class="excerpt">{{donut.excerpt}}</p>
-						<a href="#" class="btn btn-small black stroke">Read Article &nbsp;&nbsp;<svg width="20" height="10" xmlns="http://www.w3.org/2000/svg"><g stroke="#1A1418" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round"><path d="M1.5 5h15.769M14 1l4 4-4 4"/></g></svg></a>
+						<a href="#" class="btn btn-small black stroke">Read Article &nbsp;&nbsp;<svg width="20" height="10" xmlns="http://www.w3.org/2000/svg">
+								<g stroke="#1A1418" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="round">
+									<path d="M1.5 5h15.769M14 1l4 4-4 4" />
+								</g>
+							</svg></a>
 					</div>
 				</div>
 			</div>
@@ -69,6 +73,6 @@
 
 
 
-{% include "partials/footer.html" %}
-	
+{% include "sections/footer.html" %}
+
 {% endblock %}

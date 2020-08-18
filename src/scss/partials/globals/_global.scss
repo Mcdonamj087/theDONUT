@@ -1,260 +1,11 @@
 /**********************************************
- Global Styles
+ Globals & Utilities
 **********************************************/
+
 body {
   font-family: $body-font;
   font-weight: 400;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: $black;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $black;
-  font-family: $heading-font;
-  font-weight: 700;
-}
-
-h1 {
-  font-size: 36px;
-  line-height: 48px;
-
-  &.large {
-    font-size: 44px;
-    line-height: 54px;
-
-    @media screen and (max-width: $mq-max-md) {
-      font-size: 40px;
-      line-height: 42px;
-    }
-
-    @media screen and (max-width: $mq-max-sm) {
-      font-size: 36px;
-      line-height: 48px;
-    }
-  }
-
-  &.display {
-    font-size: 50px;
-    line-height: 56px;
-
-    @media screen and (max-width: $mq-max-md) {
-      font-size: 44px;
-      line-height: 54px;
-    }
-
-    @media screen and (max-width: $mq-max-sm) {
-      font-size: 40px;
-      line-height: 42px;
-    }
-  }
-
-  @media screen and (max-width: $mq-max-md) {
-    font-size: 32px;
-    line-height: 46px;
-  }
-
-  @media screen and (max-width: $mq-max-sm) {
-    font-size: 28px;
-    line-height: 38px;
-  }
-}
-
-h2 {
-  font-size: 28px;
-  line-height: 38px;
-}
-
-h3 {
-  font-size: 24px;
-  line-height: 34px;
-}
-
-h4 {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-h5 {
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-}
-
-h6 {
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-p,
-li {
-  font-size: 16px;
-  line-height: 26px;
-
-  &.small {
-    font-size: 14px;
-    line-height: 27px;
-  }
-
-  &.medium {
-    font-size: 18px;
-    line-height: 26px;
-  }
-
-  &.large {
-    font-size: 24px;
-    line-height: 36px;
-
-    @media screen and (max-width: $mq-max-md) {
-      font-size: 22px;
-      line-height: 32px;
-    }
-
-    @media screen and (max-width: $mq-max-sm) {
-      font-size: 20px;
-      line-height: 28px;
-    }
-  }
-}
-
-em,
-i {
-  font-style: italic;
-}
-
-.white-text {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p {
-    color: #fff;
-  }
-}
-
-a {
-  color: $pink;
-}
-
-strong,
-b {
-  font-weight: 600;
-}
-
-ul {
-  padding-left: 40px;
-  list-style: disc;
-
-  li {
-    padding-left: 10px;
-    margin-bottom: 20px;
-  }
-}
-
-.btn {
-  display: inline-block;
-  position: relative;
-  color: #fff;
-  background: $primary-btn-color;
-  box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color;
-  font-size: 14px;
-  line-height: $btn-height;
-  font-weight: 700;
-  text-align: center;
-  padding: 0px 25px;
-  border-radius: $btn-border-radius;
-  outline: 0;
-  z-index: 1;
-  cursor: pointer;
-  transition: $btn-timing-function;
-  transition-property: box-shadow, color, background;
-  text-decoration: none;
-
-  &:hover {
-    background: $primary-btn-color-hover;
-    box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color-hover;
-  }
-
-  &.stroke {
-    background: transparent;
-    color: $primary-btn-color;
-
-    &:hover {
-      background: $primary-btn-color;
-      box-shadow: inset 0 0 0 $btn-stroke-width $primary-btn-color;
-      color: #fff;
-
-      svg path {
-        stroke: #fff;
-      }
-    }
-
-    &.white {
-      box-shadow: inset 0 0 0 $btn-stroke-width #fff;
-      color: #fff;
-
-      &:hover {
-        background: #fff;
-        color: $black;
-      }
-    }
-    &.black {
-      box-shadow: inset 0 0 0 $btn-stroke-width $black;
-      color: $black;
-
-      &:hover {
-        background: $black;
-        color: #fff;
-      }
-    }
-  }
-
-  & + .btn {
-    margin-left: 16px;
-  }
-
-  &.btn-small {
-    line-height: $btn-height-sm;
-    font-size: 14px;
-  }
-
-  &.btn-large {
-    line-height: $btn-height-lg;
-    font-size: 16px;
-  }
-
-  &.btn-secondary {
-    background: $secondary-btn-color;
-    border-color: $secondary-btn-color;
-    color: #fff;
-
-    &:hover {
-      background: $secondary-btn-color-hover;
-      box-shadow: inset 0 0 0 $btn-stroke-width $secondary-btn-color-hover;
-      color: #fff;
-    }
-
-    &.stroke {
-      background: transparent;
-      color: $secondary-btn-color;
-
-      &:hover {
-        box-shadow: inset 0 0 0 $btn-stroke-width $secondary-btn-color;
-        background: $secondary-btn-color;
-        color: #fff;
-      }
-    }
-  }
 }
 
 .chevron-arrow-right:after {
@@ -277,68 +28,66 @@ ul {
 }
 
 .padding-100 {
-  padding: 100px 0;
-  @media screen and (max-width: $mq-max-lg) {
-    padding: 90px 0;
-  }
-  @media screen and (max-width: $mq-max-md) {
+  padding: 60px 0;
+
+  @include breakpoint('sm') {
     padding: 75px 0;
   }
-  @media screen and (max-width: $mq-max-sm) {
-    padding: 60px 0;
+
+  @include breakpoint('md') {
+    padding: 90px 0;
+  }
+
+  @include breakpoint('lg') {
+    padding: 100px 0;
   }
 }
+
 .margin-100 {
-  margin: 100px 0;
-  @media screen and (max-width: $mq-max-lg) {
-    margin: 90px 0;
-  }
-  @media screen and (max-width: $mq-max-md) {
+  margin: 60px 0;
+
+  @include breakpoint('sm') {
     margin: 75px 0;
   }
-  @media screen and (max-width: $mq-max-sm) {
-    margin: 60px 0;
+
+  @include breakpoint('md') {
+    margin: 90px 0;
+  }
+
+  @include breakpoint('lg') {
+    margin: 100px 0;
   }
 }
 
 .padding-bottom-100 {
-  padding-bottom: 100px;
-  @media screen and (max-width: $mq-max-lg) {
-    padding-bottom: 90px;
-  }
-  @media screen and (max-width: $mq-max-md) {
+  padding-bottom: 60px;
+
+  @include breakpoint('sm') {
     padding-bottom: 75px;
   }
-  @media screen and (max-width: $mq-max-sm) {
-    padding-bottom: 60px;
+
+  @include breakpoint('md') {
+    padding-bottom: 90px;
   }
-}
-.margin-bottom-100 {
-  margin-bottom: 100px;
-  @media screen and (max-width: $mq-max-lg) {
-    margin-bottom: 90px;
-  }
-  @media screen and (max-width: $mq-max-md) {
-    margin-bottom: 75px;
-  }
-  @media screen and (max-width: $mq-max-sm) {
-    margin-bottom: 60px;
+
+  @include breakpoint('lg') {
+    padding-bottom: 100px;
   }
 }
 
-.section-contour-bottom {
-  @include position(absolute, null 0 0 50%);
-  width: 100%;
-  min-width: 1440px;
-  transform: translateX(-50%);
-  @media screen and (max-width: $mq-max-lg) {
-    min-width: 1200px;
+.margin-bottom-100 {
+  margin-bottom: 60px;
+
+  @include breakpoint('sm') {
+    margin-bottom: 75px;
   }
-  @media screen and (max-width: $mq-max-md) {
-    min-width: 1000px;
+
+  @include breakpoint('md') {
+    margin-bottom: 90px;
   }
-  @media screen and (max-width: $mq-max-sm) {
-    min-width: 800px;
+
+  @include breakpoint('lg') {
+    margin-bottom: 100px;
   }
 }
 
@@ -356,92 +105,42 @@ img.adapt {
   width: 100%;
 }
 
-.social-links {
-  margin-left: -7px;
-  margin-right: -7px;
-  display: flex;
-  a {
-    background: #353334;
-    transition: $btn-timing-function;
-    display: block;
-    float: left;
-    @include size(50px);
-    margin: 0 7px;
-    border-radius: 50%;
-    &.fb:hover {
-      background: $periwinkle;
-    }
-    &.twit:hover {
-      background: $sky;
-    }
-    &.linkedin:hover {
-      background: #2f85ff;
-    }
-    &.insta:hover {
-      background: $pink;
-    }
-    &.email:hover {
-      background: $chocolate;
-    }
-  }
-}
-
-@keyframes donut-loader-inner {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(360deg);
-  }
-}
-@keyframes donut-loader-outer {
-  0% {
-    transform: rotateZ(0deg);
-  }
-  100% {
-    transform: rotateZ(-360deg);
-  }
-}
-
-#donut-loader {
-  @include size(200px);
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: scale(0.8) translate(-50%, -50%);
-  transform-origin: 0% 0%;
-  background: $black;
-  z-index: 100;
-  border-radius: 50%;
-  box-shadow: 0 22px 24px rgba($black, 0.4);
-  opacity: 0;
-  pointer-events: none;
-  will-change: transform;
-  & > img {
-    position: absolute;
-    width: 100%;
-    will-change: transform;
-  }
-  &.active {
-    transition: 1s cubic-bezier(0.33, 0.1, 0.05, 0.99);
-    opacity: 1;
-    transform: scale(1) translate(-50%, -50%);
-    .inner {
-      animation: donut-loader-inner 7s infinite linear;
-    }
-    .outer {
-      animation: donut-loader-outer 8s infinite linear;
-    }
-  }
-}
-
 .spacer-40 {
+  height: 30px;
+
+  @include breakpoint(sm) {
+    height: 40px;
+  }
+}
+
+.spacer-60 {
   height: 40px;
-  @media screen and (max-width: $mq-max-sm) {
-    height: 30px;
+
+  @include breakpoint(sm) {
+    height: 60px;
   }
 }
 
 .absolute-0 {
   @include position(absolute, 0);
+}
+
+.relative {
+  position: relative;
+}
+
+// Generates utility classes for colored backgrounds
+$donut-bkg-colors: (
+  black: $black,
+  soft-black: $soft-black,
+  pink: $pink,
+);
+
+@each $key in map-keys($donut-bkg-colors) {
+  $color: map-get($donut-bkg-colors, $key);
+
+  .bkg--#{$key} {
+    background: $color;
+    color: adapt_text($color);
+  }
 }

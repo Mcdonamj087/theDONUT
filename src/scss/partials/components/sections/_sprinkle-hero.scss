@@ -6,22 +6,27 @@
   text-align: center;
   position: relative;
   padding-bottom: 110px;
+
   @include breakpoint('xl') {
     padding-top: 150px;
     padding-bottom: 100px;
   }
+
   @include breakpoint('lg') {
     padding-top: 140px;
     padding-bottom: 90px;
   }
+
   @include breakpoint('md') {
     padding-top: 130px;
     padding-bottom: 75px;
   }
+
   @include breakpoint('sm') {
     padding-top: 120px;
     padding-bottom: 60px;
   }
+
   &.periwinkle {
     background: linear-gradient(
         45deg,

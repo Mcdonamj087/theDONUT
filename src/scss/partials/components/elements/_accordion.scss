@@ -1,0 +1,43 @@
+/**********************************************
+ Accordion
+**********************************************/
+.accordion {
+  position: relative;
+  box-shadow: inset 0 0 0 3px $periwinkle;
+  background: rgba($periwinkle, 0.06);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
+  transition-property: height, background;
+  margin-bottom: 20px;
+
+  &:before {
+    content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='15' height='11' fill='none'%3E%3Cpath d='M1.5 2l6 6 6-6' stroke='%234C51F0' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+    display: block;
+    @include position(absolute, 30px 27px null null);
+    transition: transform 0.3s cubic-bezier(0.17, 0.84, 0.44, 1);
+    transform: rotate(-180deg);
+    pointer-events: none;
+  }
+
+  &.is-open {
+    background: #fff;
+    &:before {
+      transform: rotate(0);
+    }
+  }
+
+  .question {
+    padding: 20px 65px 20px 20px;
+    color: $periwinkle;
+    cursor: pointer;
+  }
+
+  .answer {
+    padding: 0 20px 20px 20px;
+  }
+
+  .active {
+    background: #fff;
+  }
+}

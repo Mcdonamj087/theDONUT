@@ -3,13 +3,13 @@
   <div class="header-block--desktop-nav">
     <nav>
       <div class="nav-item">
-        <a href="/" title="Home">Home</a>
+        <a href="{{pages.home.slug}}" title="Home">Home</a>
       </div>
       <div class="nav-item">
-        <a href="https://thedonut.co/about/" title="About">About</a>
+        <a href="{{pages.about.slug}}" title="About">About</a>
       </div>
       <div class="nav-item">
-        <a href="https://mydonut.co/merch" title="Shop">Shop</a>
+        <a href="{{pages.shop.slug}}" title="Shop">Shop</a>
       </div>
       <div class="nav-item has-submenu">
         <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
@@ -19,10 +19,10 @@
             <svg class="submenu-point" width="50" height="10" xmlns="http://www.w3.org/2000/svg">
               <path d="M25 10H0c16.12 0 21.548-6.368 25-10v.004C28.452 3.632 33.88 10 50 10H25v-.26.26z" fill="#FFF" fill-rule="evenodd" /></svg>
             <div class="submenu-item latest">
-              <a href="https://thedonut.co/latest/" title="Latest">Latest</a>
+              <a href="{{pages.latest.slug}}" title="{{pages.latest.title}}">Latest</a>
             </div>
             <div class="submenu-item">
-              <a href="https://thedonut.co/archive/" title="Archive">Archive</a>
+              <a href="{{pages.archive.slug}}" title="{{pages.archive.title}}">Archive</a>
             </div>
           </nav>
         </div>
@@ -30,7 +30,7 @@
     </nav>
   </div>
   <div class="header-block--cta">
-    <a id="header-refer" class="btn stroke white btn-small" href="https://ambassadors.thedonut.co/refer-a-friend/">Refer a Friend</a>
+    <a id="header-refer" class="btn stroke white btn-small" href="{{pages.ambassadors_refer_a_friend.slug}}">Refer a Friend</a>
     <a id="header-subscribe" class="btn btn-small" href="javascript:void(0)">Subscribe <svg viewBox="0 0 21 16" width="21" height="16" xmlns="http://www.w3.org/2000/svg">
         <path d="M20.94 5.16v9.02c0 .5-.19.93-.55 1.29-.37.35-.8.53-1.32.53H1.87c-.51 0-.95-.18-1.32-.53A1.73 1.73 0 0 1 0 14.18V5.16c.34.37.74.7 1.18.99a234.11 234.11 0 0 1 6.89 4.66c.27.18.64.36 1.1.55.46.18.89.28 1.29.28h.02c.4 0 .83-.1 1.28-.28.46-.19.83-.37 1.1-.55a243.82 243.82 0 0 1 6.9-4.66c.45-.3.84-.63 1.18-1zm0-3.34c0 .6-.2 1.17-.58 1.71a5.48 5.48 0 0 1-1.42 1.4 9439.38 9439.38 0 0 0-7.2 4.84c-.24.14-.47.24-.68.31-.2.07-.4.1-.58.1h-.02a1.9 1.9 0 0 1-.59-.1 3.59 3.59 0 0 1-.67-.3 12.18 12.18 0 0 1-1.24-.8l-.5-.36a579.36 579.36 0 0 0-5.45-3.69A5.73 5.73 0 0 1 .64 3.62 2.61 2.61 0 0 1 0 2.07C0 1.47.16.98.48.59.81.2 1.27 0 1.87 0h17.2c.5 0 .94.18 1.31.53.37.36.56.79.56 1.29z" fill="#FFFCE9" fill-rule="nonzero" /></svg></a>
 
@@ -65,16 +65,16 @@
   <div class="mobile-nav-wrapper">
     <nav id="mobile-menu">
 
-      <a href="/" title="Home">Home</a>
-      <a href="https://thedonut.co/about/" title="About">About</a>
-      <a href="https://mydonut.co/merch" title="Shop">Shop</a>
+      <a href="{{pages.home.slug}}" title="{{pages.home.title}}">Home</a>
+      <a href="{{pages.about.slug}}" title="{{pages.about.title}}">About</a>
+      <a href="{{pages.shop.slug}}" title="{{pages.shop.title}}">Shop</a>
 
       <div class="nav-item has-submenu">
         <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.594 1.485l4 4 4-4" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" /></svg></p>
         <nav class="submenu">
-          <a href="https://thedonut.co/latest/" title="Latest">Latest</a>
-          <a href="https://thedonut.co/archive/" title="Archive">Archive</a>
+          <a href="{{pages.latest.slug}}" title="{{pages.latest.title}}">Latest</a>
+          <a href="{{pages.archive.slug}}" title="{{pages.archive.title}}">Archive</a>
         </nav>
       </div>
 

@@ -1,0 +1,43 @@
+// Mixin to Generate Media Queries
+///////////////////////////////////////////////
+
+@mixin breakpoint($size, $max: false) {
+  @if $size == 'sm' {
+    $breakpoint: 575 !global;
+  }
+  @if $size == 'md' {
+    $breakpoint: 768 !global;
+  }
+  @if $size == 'lg' {
+    $breakpoint: 992 !global;
+  }
+  @if $size == 'xl' {
+    $breakpoint: 1200 !global;
+  }
+  @if type-of($size) == 'number' {
+    $breakpoint: $size !global;
+  }
+
+  @if $size !=
+    'sm' and
+    $size !=
+    'md' and
+    $size !=
+    'lg' and
+    $size !=
+    'xl' and
+    type-of($size) !=
+    'number'
+  {
+    @error "Property #{$size} must equal to 'sm', 'md', 'lg', or 'lx' OR you can use a number to specify a custom breakpoint";
+  }
+  @if $max {
+    @media screen and (max-width: $breakpoint - 1 + 'px') {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $breakpoint + 'px') {
+      @content;
+    }
+  }
+}

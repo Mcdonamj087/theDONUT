@@ -6,31 +6,35 @@
   "pages": {
     "home": {
       "title": "Home",
-      "slug": "http://localhost:3000/index.html"
+      "slug": "/"
     },
     "about": {
       "title": "About Us",
-      "slug": "http://localhost:3000/about.html"
+      "slug": "about.html"
     },
     "team": {
-      "title": "About Us",
-      "slug": "http://localhost:3000/about.html"
+      "title": "Team",
+      "slug": "team.html"
     },
     "ambassadors": {
       "title": "Ambassadors",
-      "slug": "http://localhost:3000/ambassadors.html"
+      "slug": "ambassadors.html"
     },
     "ambassadors_refer_a_friend": {
       "title": "Refer a Friend",
-      "slug": "http://localhost:3000/ambassadors-refer-a-friend.html"
+      "slug": "ambassadors-refer-a-friend.html"
     },
     "welcome": {
       "title": "Welcome",
-      "slug": "http://localhost:3000/welcome.html"
+      "slug": "welcome.html"
     },
-    "todays_donut": {
-      "title": "Today's Donut",
-      "slug": "https://mydonut.co/todaysdonut"
+    "latest": {
+      "title": "Latest",
+      "slug": "latest.html"
+    },
+    "archive": {
+      "title": "Archive",
+      "slug": "archive.html"
     },
     "shop": {
       "title": "Shop",
@@ -41,7 +45,7 @@
   "footer_nav_items": [
     {
       "title": "Ambassadors",
-      "href": "http://localhost:3000/ambassadors.html"
+      "href": "ambassadors.html"
     },
     {
       "title": "Contact",

@@ -1,22 +1,38 @@
 @import '../../node_modules/bourbon/core/bourbon';
 
 // ==========================================
-//  GLOBALS
+//  CORE
+// ==========================================
+@import 'partials/core/variables';
+@import 'partials/core/functions';
+@import 'partials/core/breakpoints';
+
+// ==========================================
+//  GLOBAL
 // ==========================================
 @import 'partials/globals/reset';
-@import 'partials/globals/variables';
 @import 'partials/globals/global';
+@import 'partials/globals/typography';
 @import 'partials/globals/single-input-form';
 
 // ==========================================
-//  COMPONENTS
+//  COMPONENTS - Elements
 // ==========================================
-@import 'partials/components/header';
-@import 'partials/components/footer';
-@import 'partials/components/date-bubbles';
-@import 'partials/components/sprinkle-hero';
-@import 'partials/components/stale-donut-cards';
-@import 'partials/components/footer-subscribe';
+@import 'partials/components/elements/accordion';
+@import 'partials/components/elements/button';
+@import 'partials/components/elements/date-bubbles';
+@import 'partials/components/elements/donut-loader';
+@import 'partials/components/elements/frosting-contour';
+@import 'partials/components/elements/stale-donut-card';
+@import 'partials/components/elements/social-links';
+
+// ==========================================
+//  COMPONENTS - Sections
+// ==========================================
+@import 'partials/components/sections/header';
+@import 'partials/components/sections/footer';
+@import 'partials/components/sections/sprinkle-hero';
+@import 'partials/components/sections/footer-subscribe';
 
 // ==========================================
 //  TEMPLATES
@@ -26,9 +42,9 @@
 // ==========================================
 //  PAGES
 // ==========================================
-@import 'partials/homepage';
-@import 'partials/welcome';
-@import 'partials/about';
-@import 'partials/team';
-@import 'partials/latest';
-@import 'partials/archives';
+@import 'partials/pages/homepage';
+@import 'partials/pages/welcome';
+@import 'partials/pages/about';
+@import 'partials/pages/team';
+@import 'partials/pages/latest';
+@import 'partials/pages/archives';

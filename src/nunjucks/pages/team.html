@@ -4,19 +4,19 @@
 
 {% block content %}
 
-{% include "partials/header.html" %}
+{% include "sections/header.html" %}
 
 <section class="team-hero">
-	<div class="container">
-		<div class="row">
-			<div class="col white-text">
+  <div class="container">
+    <div class="row">
+      <div class="col white-text">
         <div class="about-excerpt">
           <h1 class="large">Meet the team.</h1>
         </div>
-			</div>
-		</div>
-	</div>
-<img class="section-contour-bottom" src="{{root_url}}/svg/frosting-contour-white.svg">
+      </div>
+    </div>
+  </div>
+  <img class="section-contour-bottom" src="{{root_url}}/svg/frosting-contour-white.svg">
 </section>
 
 <section class="team-headshots">
@@ -41,6 +41,6 @@
 
 
 
-{% include "partials/footer.html" %}
-	
+{% include "sections/footer.html" %}
+
 {% endblock %}

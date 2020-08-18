@@ -1,0 +1,55 @@
+@keyframes donut-loader-inner {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes donut-loader-outer {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(-360deg);
+  }
+}
+
+#donut-loader {
+  @include size(200px);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: scale(0.8) translate(-50%, -50%);
+  transform-origin: 0% 0%;
+  background: $black;
+  z-index: 100;
+  border-radius: 50%;
+  box-shadow: 0 22px 24px rgba($black, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  will-change: transform;
+
+  & > img {
+    position: absolute;
+    width: 100%;
+    will-change: transform;
+  }
+
+  &.active {
+    transition: 1s cubic-bezier(0.33, 0.1, 0.05, 0.99);
+    opacity: 1;
+    transform: scale(1) translate(-50%, -50%);
+
+    .inner {
+      animation: donut-loader-inner 7s infinite linear;
+    }
+
+    .outer {
+      animation: donut-loader-outer 8s infinite linear;
+    }
+  }
+}
