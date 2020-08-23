@@ -126,6 +126,7 @@ var replace = require('gulp-replace');
 // Scripts
 var jshint = require('gulp-jshint');
 var stylish = require('jshint-stylish');
+var babel = require('gulp-babel');
 var concat = require('gulp-concat');
 var uglify = require('gulp-terser');
 var optimizejs = require('gulp-optimize-js');
@@ -181,27 +182,20 @@ var buildScripts = function (done) {
     flatmap(function (stream, file) {
       // If the file is a directory
       if (file.isDirectory()) {
-        // Setup a suffix variable
-        var suffix = '';
-
-        // If separate polyfill files enabled
-        if (settings.polyfills) {
-          // Update the suffix
-          suffix = '.polyfills';
-
-          // Grab files that aren't polyfills, concatenate them, and process them
-          src([
-            file.path + '/*.js',
-            '!' + file.path + '/*' + paths.scripts.polyfills,
-          ])
-            .pipe(concat(file.relative + '.js'))
-            .pipe(jsTasks());
-        }
+        // Grab files that aren't polyfills, concatenate them, and process them
+        src(file.path + '/*.js')
+          .pipe(concat(file.relative + '.js'))
+          .pipe(
+            babel({
+              presets: ['@babel/env'],
+            })
+          )
+          .pipe(jsTasks());
 
         // Grab all files and concatenate them
         // If separate polyfills enabled, this will have .polyfills in the filename
         src(file.path + '/*.js')
-          .pipe(concat(file.relative + suffix + '.js'))
+          .pipe(concat(file.relative + '.js'))
           .pipe(jsTasks());
 
         return stream;

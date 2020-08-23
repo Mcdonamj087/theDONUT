@@ -10,12 +10,15 @@
     "url": "http://link-to-your-git-repo.com"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/preset-env": "^7.11.0",
     "bourbon": "^5.1.0",
     "browser-sync": "2.26.3",
     "del": "3.0.0",
     "fs": "0.0.1-security",
     "gulp": "4.0.1",
     "gulp-autoprefixer": "6.0.0",
+    "gulp-babel": "^8.0.0",
     "gulp-concat": "2.6.1",
     "gulp-cssnano": "2.1.3",
     "gulp-data": "^1.3.1",
