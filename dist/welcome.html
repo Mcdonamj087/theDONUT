@@ -13,48 +13,202 @@
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#ffffff">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="http://localhost:3000/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="http://localhost:3000/css/styles.css">
-	<script type="text/javascript" src="http://localhost:3000/js/active_campaign_forms.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/active_campaign_forms.js"></script>
 </head>
 <body 
 	 
-		class="welcome black-nav-text"
+		class="welcome" 
 	
 >
 <div class="wrapper">
 
 	
 
+
+
 <!-- Begin Global Header -->
 <header>
   <div class="header-block--desktop-nav">
     <nav>
+
       <div class="nav-item">
         <a href="/" title="Home">Home</a>
       </div>
+
       <div class="nav-item">
         <a href="about.html" title="About">About</a>
       </div>
+
       <div class="nav-item">
         <a href="https://mydonut.co/merch" title="Shop">Shop</a>
       </div>
-      <div class="nav-item has-submenu">
-        <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
+
+      <div class="nav-item has-mega-menu">
+        <p>Newsletters <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.594 1.485l4 4 4-4" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" /></svg></p>
-        <div class="outer">
-          <nav class="submenu">
-            <svg class="submenu-point" width="50" height="10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 10H0c16.12 0 21.548-6.368 25-10v.004C28.452 3.632 33.88 10 50 10H25v-.26.26z" fill="#FFF" fill-rule="evenodd" /></svg>
-            <div class="submenu-item latest">
-              <a href="latest.html" title="Latest">Latest</a>
+        <div class="mega-menu">
+
+          <div class="mega-menu--tabs">
+            <div class="inner">
+
+              <div class="tab daily active" data-tab="daily">
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M20.905 24.126c.61.29 1.074.69 1.392 1.196.315.506.474 1.078.474 1.714 0 .786-.204 1.42-.613 1.897-.41.478-.92.78-1.53.904v.085c1.579.502 2.369 1.475 2.369 2.922 0 .694-.162 1.311-.485 1.852-.323.54-.793.962-1.408 1.263-.618.302-1.358.453-2.223.453-1.406 0-2.52-.342-3.345-1.026-.824-.68-1.27-1.723-1.339-3.123h2.887c.023.534.173.955.45 1.263.275.307.68.462 1.21.462.426 0 .763-.125 1.01-.377.249-.25.373-.574.373-.973 0-.99-.726-1.485-2.179-1.485h-.553v-2.374h.536c1.302.023 1.954-.437 1.954-1.383 0-.41-.113-.726-.338-.949-.225-.221-.526-.332-.908-.332-.414 0-.742.14-.985.419-.242.279-.38.652-.414 1.118h-2.888c.057-1.275.46-2.254 1.21-2.936.749-.683 1.798-1.025 3.147-1.025.852 0 1.585.145 2.196.435zM28.234 33.416c.3.323.737.486 1.315.486.518 0 .923-.142 1.219-.427.294-.284.44-.7.44-1.247 0-.546-.15-.964-.449-1.254-.301-.29-.71-.436-1.227-.436-.496 0-.91.14-1.246.418-.334.279-.5.675-.5 1.187 0 .523.15.947.448 1.273zm2.152-6.977c-.236-.25-.572-.374-1.01-.374-.669 0-1.145.303-1.427.912-.283.609-.412 1.546-.389 2.81.195-.468.534-.835 1.011-1.101.479-.268 1.035-.402 1.669-.402 1.151 0 2.063.344 2.731 1.032.669.69 1.003 1.677 1.003 2.964 0 .807-.167 1.526-.502 2.15a3.485 3.485 0 0 1-1.477 1.461c-.651.347-1.432.52-2.343.52-1.786 0-3.02-.546-3.7-1.64-.68-1.09-1.02-2.605-1.02-4.54 0-2.232.364-3.873 1.09-4.926.725-1.054 1.907-1.58 3.544-1.58 1.29 0 2.27.362 2.94 1.084.666.722 1.042 1.637 1.122 2.741h-2.766c-.081-.49-.24-.86-.476-1.111zM42.306 30.128c0-1.081-.129-1.909-.388-2.485-.26-.574-.77-.862-1.53-.862-.773 0-1.29.29-1.556.871-.265.581-.398 1.406-.398 2.476 0 1.082.133 1.916.398 2.501.265.588.783.88 1.556.88.76 0 1.27-.292 1.53-.88.26-.585.388-1.419.388-2.501zm-6.777 0c0-1.879.387-3.367 1.16-4.465.77-1.099 2.004-1.648 3.699-1.648 1.682 0 2.912.55 3.69 1.648.778 1.098 1.166 2.586 1.166 4.465 0 1.89-.388 3.388-1.166 4.49-.778 1.105-2.008 1.657-3.69 1.657-1.695 0-2.928-.552-3.7-1.656-.772-1.103-1.16-2.601-1.16-4.491z" fill="#fff" />
+  <path clip-rule="evenodd" d="M52.89 29.915c0 12.72-10.44 23.03-23.317 23.03-12.879 0-23.317-10.31-23.317-23.03 0-12.718 10.438-23.03 23.317-23.03 12.877 0 23.317 10.312 23.317 23.03z" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.08 21.459c1.651-8.536 5.728-14.574 10.492-14.574 3.114 0 5.935 2.578 7.974 6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M39.894 16.7c0 .567-.464 1.023-1.034 1.023a1.026 1.026 0 0 1-1.034-1.022c0-.564.462-1.02 1.034-1.02.57 0 1.034.456 1.034 1.02z" fill="#fff" />
+  <path d="M39.894 38.373c-1.65 8.535-5.727 14.573-10.492 14.573-3.114 0-5.934-2.578-7.973-6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M19.08 43.4c0-.564.464-1.02 1.035-1.02.572 0 1.033.456 1.033 1.02 0 .566-.461 1.022-1.033 1.022-.571 0-1.034-.456-1.034-1.022z" fill="#fff" />
+  <path d="M47.308 22.685c-4.277-2.391-10.636-3.907-17.735-3.907-12.878 0-23.317 4.986-23.317 11.138 0 6.15 10.44 11.137 23.317 11.137s23.316-4.987 23.316-11.137c0-1.558-.67-3.042-1.879-4.389" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" /></svg>
+
+
+
+                <p class="title">The Daily DONUT</p>
+              </div>
+
+              <div class="tab positive" data-tab="positive">
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M52.007 34.484c0 11.28-9.178 20.426-20.497 20.426-11.322 0-20.5-9.145-20.5-20.426 0-11.282 9.178-20.426 20.5-20.426 11.32 0 20.497 9.145 20.497 20.426z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.9 31.645a3.404 3.404 0 0 1 2.773-3.944 3.414 3.414 0 0 1 3.957 2.762M36.389 30.463a3.415 3.415 0 0 1 3.957-2.762 3.405 3.405 0 0 1 2.771 3.943M21.855 37.888a10.243 10.243 0 0 0 9.654 6.81c4.46 0 8.245-2.846 9.653-6.81M6.875 12.5v10M11.875 17.5h-10M50.676 50.188v6.38M53.878 53.378h-6.405M24.72 1.411c.176 1.56-.573 1.644-.396 3.205.175 1.563.923 1.48 1.1 3.042.175 1.563-.572 1.647-.395 3.21M57.716 17.93c-.874.603-1.113.258-1.989.861-.875.606-.636.949-1.513 1.555-.878.604-1.116.258-1.993.862M10.342 50.564c-.875.602-1.115.258-1.99.86-.875.606-.636.95-1.513 1.554-.877.606-1.116.261-1.993.864" stroke="#fff" stroke-width="2.5" /></svg>
+
+
+
+                <p class="title">The Positive DONUT</p>
+              </div>
+
+              <div class="tab future" data-tab="future">
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M50.795 8.768s-13.258-.884-23.865 9.723c-7.955 7.956-12.374 17.677-12.374 17.677l4.419 4.42 4.42 4.419s9.722-4.419 17.677-12.374c10.606-10.608 9.723-23.865 9.723-23.865z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path clip-rule="evenodd" d="M40.188 26.446a5 5 0 1 1-7.071-7.072 5 5 0 0 1 7.07 7.072z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M42.85 9.65a9.318 9.318 0 0 0 6.885 7.733M21.798 24.402l-5.325.852a3.617 3.617 0 0 0-2.722 2.076l-3.615 7.954 5.16-.616M35.161 37.765l-.852 5.326a3.615 3.615 0 0 1-2.075 2.72l-7.956 3.616.617-5.16" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M12.559 41.54l-2.835 2.835M18.987 47.968L14.756 52.2M15.773 44.754L8.75 51.777" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+
+
+
+                <p class="title">The Futuristic DONUT</p>
+              </div>
+
             </div>
-            <div class="submenu-item">
-              <a href="archive.html" title="Archive">Archive</a>
+          </div>
+
+          <div class="mega-menu--main" data-active="daily">
+
+            <div class="main daily active">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M20.905 24.126c.61.29 1.074.69 1.392 1.196.315.506.474 1.078.474 1.714 0 .786-.204 1.42-.613 1.897-.41.478-.92.78-1.53.904v.085c1.579.502 2.369 1.475 2.369 2.922 0 .694-.162 1.311-.485 1.852-.323.54-.793.962-1.408 1.263-.618.302-1.358.453-2.223.453-1.406 0-2.52-.342-3.345-1.026-.824-.68-1.27-1.723-1.339-3.123h2.887c.023.534.173.955.45 1.263.275.307.68.462 1.21.462.426 0 .763-.125 1.01-.377.249-.25.373-.574.373-.973 0-.99-.726-1.485-2.179-1.485h-.553v-2.374h.536c1.302.023 1.954-.437 1.954-1.383 0-.41-.113-.726-.338-.949-.225-.221-.526-.332-.908-.332-.414 0-.742.14-.985.419-.242.279-.38.652-.414 1.118h-2.888c.057-1.275.46-2.254 1.21-2.936.749-.683 1.798-1.025 3.147-1.025.852 0 1.585.145 2.196.435zM28.234 33.416c.3.323.737.486 1.315.486.518 0 .923-.142 1.219-.427.294-.284.44-.7.44-1.247 0-.546-.15-.964-.449-1.254-.301-.29-.71-.436-1.227-.436-.496 0-.91.14-1.246.418-.334.279-.5.675-.5 1.187 0 .523.15.947.448 1.273zm2.152-6.977c-.236-.25-.572-.374-1.01-.374-.669 0-1.145.303-1.427.912-.283.609-.412 1.546-.389 2.81.195-.468.534-.835 1.011-1.101.479-.268 1.035-.402 1.669-.402 1.151 0 2.063.344 2.731 1.032.669.69 1.003 1.677 1.003 2.964 0 .807-.167 1.526-.502 2.15a3.485 3.485 0 0 1-1.477 1.461c-.651.347-1.432.52-2.343.52-1.786 0-3.02-.546-3.7-1.64-.68-1.09-1.02-2.605-1.02-4.54 0-2.232.364-3.873 1.09-4.926.725-1.054 1.907-1.58 3.544-1.58 1.29 0 2.27.362 2.94 1.084.666.722 1.042 1.637 1.122 2.741h-2.766c-.081-.49-.24-.86-.476-1.111zM42.306 30.128c0-1.081-.129-1.909-.388-2.485-.26-.574-.77-.862-1.53-.862-.773 0-1.29.29-1.556.871-.265.581-.398 1.406-.398 2.476 0 1.082.133 1.916.398 2.501.265.588.783.88 1.556.88.76 0 1.27-.292 1.53-.88.26-.585.388-1.419.388-2.501zm-6.777 0c0-1.879.387-3.367 1.16-4.465.77-1.099 2.004-1.648 3.699-1.648 1.682 0 2.912.55 3.69 1.648.778 1.098 1.166 2.586 1.166 4.465 0 1.89-.388 3.388-1.166 4.49-.778 1.105-2.008 1.657-3.69 1.657-1.695 0-2.928-.552-3.7-1.656-.772-1.103-1.16-2.601-1.16-4.491z" fill="#fff" />
+  <path clip-rule="evenodd" d="M52.89 29.915c0 12.72-10.44 23.03-23.317 23.03-12.879 0-23.317-10.31-23.317-23.03 0-12.718 10.438-23.03 23.317-23.03 12.877 0 23.317 10.312 23.317 23.03z" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.08 21.459c1.651-8.536 5.728-14.574 10.492-14.574 3.114 0 5.935 2.578 7.974 6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M39.894 16.7c0 .567-.464 1.023-1.034 1.023a1.026 1.026 0 0 1-1.034-1.022c0-.564.462-1.02 1.034-1.02.57 0 1.034.456 1.034 1.02z" fill="#fff" />
+  <path d="M39.894 38.373c-1.65 8.535-5.727 14.573-10.492 14.573-3.114 0-5.934-2.578-7.973-6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M19.08 43.4c0-.564.464-1.02 1.035-1.02.572 0 1.033.456 1.033 1.02 0 .566-.461 1.022-1.033 1.022-.571 0-1.034-.456-1.034-1.022z" fill="#fff" />
+  <path d="M47.308 22.685c-4.277-2.391-10.636-3.907-17.735-3.907-12.878 0-23.317 4.986-23.317 11.138 0 6.15 10.44 11.137 23.317 11.137s23.316-4.987 23.316-11.137c0-1.558-.67-3.042-1.879-4.389" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" /></svg>
+
+
+
+                <div class="title">
+                  <h1 class="display">The Daily DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Fact-Based. Impartial. Engaging</h6>
+                  <p>Leave no stone unturned. Stay on top of the latest U.S. politics and geopolitical news - and how both sides are responding.</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                  <a href="#" class="btn stroke white">See Today's Newsletter</a>
+                  <a href="#" class="btn stroke white">Archives</a>
+                </div>
+              </div>
             </div>
-          </nav>
+
+            <div class="main positive">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M52.007 34.484c0 11.28-9.178 20.426-20.497 20.426-11.322 0-20.5-9.145-20.5-20.426 0-11.282 9.178-20.426 20.5-20.426 11.32 0 20.497 9.145 20.497 20.426z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.9 31.645a3.404 3.404 0 0 1 2.773-3.944 3.414 3.414 0 0 1 3.957 2.762M36.389 30.463a3.415 3.415 0 0 1 3.957-2.762 3.405 3.405 0 0 1 2.771 3.943M21.855 37.888a10.243 10.243 0 0 0 9.654 6.81c4.46 0 8.245-2.846 9.653-6.81M6.875 12.5v10M11.875 17.5h-10M50.676 50.188v6.38M53.878 53.378h-6.405M24.72 1.411c.176 1.56-.573 1.644-.396 3.205.175 1.563.923 1.48 1.1 3.042.175 1.563-.572 1.647-.395 3.21M57.716 17.93c-.874.603-1.113.258-1.989.861-.875.606-.636.949-1.513 1.555-.878.604-1.116.258-1.993.862M10.342 50.564c-.875.602-1.115.258-1.99.86-.875.606-.636.95-1.513 1.554-.877.606-1.116.261-1.993.864" stroke="#fff" stroke-width="2.5" /></svg>
+
+
+
+                <div class="title">
+                  <h1 class="display">The Positive DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Your antidote to news anxiety</h6>
+                  <p>Start each weekday with “awww”-inspiring stories you don’t hear about in the news. Guaranteed to put a smile on your face (even if it’s just with bad puns).</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="main future">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M50.795 8.768s-13.258-.884-23.865 9.723c-7.955 7.956-12.374 17.677-12.374 17.677l4.419 4.42 4.42 4.419s9.722-4.419 17.677-12.374c10.606-10.608 9.723-23.865 9.723-23.865z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path clip-rule="evenodd" d="M40.188 26.446a5 5 0 1 1-7.071-7.072 5 5 0 0 1 7.07 7.072z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M42.85 9.65a9.318 9.318 0 0 0 6.885 7.733M21.798 24.402l-5.325.852a3.617 3.617 0 0 0-2.722 2.076l-3.615 7.954 5.16-.616M35.161 37.765l-.852 5.326a3.615 3.615 0 0 1-2.075 2.72l-7.956 3.616.617-5.16" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M12.559 41.54l-2.835 2.835M18.987 47.968L14.756 52.2M15.773 44.754L8.75 51.777" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+
+
+
+                <div class="title">
+                  <h1 class="display">The Futuristic DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Get psyched about what's ahead</h6>
+                  <p>Discover cutting-edge tech innovations, the latest medical breakthroughs, and other odds and ends shaping the future of our world. In other words, just plain old cool sh*t.</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
+
     </nav>
   </div>
   <div class="header-block--cta">
@@ -90,26 +244,91 @@
     <span></span>
     <span></span>
   </div>
-  <div class="mobile-nav-wrapper">
-    <nav id="mobile-menu">
+  <div class="mobile-menu-wrapper">
+    <div class="inner">
 
-      <a href="/" title="Home">Home</a>
-      <a href="about.html" title="About Us">About</a>
-      <a href="https://mydonut.co/merch" title="Shop">Shop</a>
+      <nav class="mobile-menu main">
+        <div class="nav-item">
+          <a href="/" title="Home">Home</a>
+        </div>
 
-      <div class="nav-item has-submenu">
-        <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.594 1.485l4 4 4-4" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" /></svg></p>
-        <nav class="submenu">
-          <a href="latest.html" title="Latest">Latest</a>
-          <a href="archive.html" title="Archive">Archive</a>
-        </nav>
-      </div>
+        <div class="nav-item">
+          <a href="about.html" title="About Us">About</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="https://mydonut.co/merch" title="Shop">Shop</a>
+        </div>
+
+        <div class="nav-item newsletters">
+          <p>Newsletters</p>
+          <div class="newsletters-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="mobile-menu newsletters">
+        <div class="menu-back">
+          <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+          </svg> Back
+        </div>
+
+        <div class="nav-item daily" data-name="daily">
+          
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M20.905 24.126c.61.29 1.074.69 1.392 1.196.315.506.474 1.078.474 1.714 0 .786-.204 1.42-.613 1.897-.41.478-.92.78-1.53.904v.085c1.579.502 2.369 1.475 2.369 2.922 0 .694-.162 1.311-.485 1.852-.323.54-.793.962-1.408 1.263-.618.302-1.358.453-2.223.453-1.406 0-2.52-.342-3.345-1.026-.824-.68-1.27-1.723-1.339-3.123h2.887c.023.534.173.955.45 1.263.275.307.68.462 1.21.462.426 0 .763-.125 1.01-.377.249-.25.373-.574.373-.973 0-.99-.726-1.485-2.179-1.485h-.553v-2.374h.536c1.302.023 1.954-.437 1.954-1.383 0-.41-.113-.726-.338-.949-.225-.221-.526-.332-.908-.332-.414 0-.742.14-.985.419-.242.279-.38.652-.414 1.118h-2.888c.057-1.275.46-2.254 1.21-2.936.749-.683 1.798-1.025 3.147-1.025.852 0 1.585.145 2.196.435zM28.234 33.416c.3.323.737.486 1.315.486.518 0 .923-.142 1.219-.427.294-.284.44-.7.44-1.247 0-.546-.15-.964-.449-1.254-.301-.29-.71-.436-1.227-.436-.496 0-.91.14-1.246.418-.334.279-.5.675-.5 1.187 0 .523.15.947.448 1.273zm2.152-6.977c-.236-.25-.572-.374-1.01-.374-.669 0-1.145.303-1.427.912-.283.609-.412 1.546-.389 2.81.195-.468.534-.835 1.011-1.101.479-.268 1.035-.402 1.669-.402 1.151 0 2.063.344 2.731 1.032.669.69 1.003 1.677 1.003 2.964 0 .807-.167 1.526-.502 2.15a3.485 3.485 0 0 1-1.477 1.461c-.651.347-1.432.52-2.343.52-1.786 0-3.02-.546-3.7-1.64-.68-1.09-1.02-2.605-1.02-4.54 0-2.232.364-3.873 1.09-4.926.725-1.054 1.907-1.58 3.544-1.58 1.29 0 2.27.362 2.94 1.084.666.722 1.042 1.637 1.122 2.741h-2.766c-.081-.49-.24-.86-.476-1.111zM42.306 30.128c0-1.081-.129-1.909-.388-2.485-.26-.574-.77-.862-1.53-.862-.773 0-1.29.29-1.556.871-.265.581-.398 1.406-.398 2.476 0 1.082.133 1.916.398 2.501.265.588.783.88 1.556.88.76 0 1.27-.292 1.53-.88.26-.585.388-1.419.388-2.501zm-6.777 0c0-1.879.387-3.367 1.16-4.465.77-1.099 2.004-1.648 3.699-1.648 1.682 0 2.912.55 3.69 1.648.778 1.098 1.166 2.586 1.166 4.465 0 1.89-.388 3.388-1.166 4.49-.778 1.105-2.008 1.657-3.69 1.657-1.695 0-2.928-.552-3.7-1.656-.772-1.103-1.16-2.601-1.16-4.491z" fill="#fff" />
+  <path clip-rule="evenodd" d="M52.89 29.915c0 12.72-10.44 23.03-23.317 23.03-12.879 0-23.317-10.31-23.317-23.03 0-12.718 10.438-23.03 23.317-23.03 12.877 0 23.317 10.312 23.317 23.03z" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.08 21.459c1.651-8.536 5.728-14.574 10.492-14.574 3.114 0 5.935 2.578 7.974 6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M39.894 16.7c0 .567-.464 1.023-1.034 1.023a1.026 1.026 0 0 1-1.034-1.022c0-.564.462-1.02 1.034-1.02.57 0 1.034.456 1.034 1.02z" fill="#fff" />
+  <path d="M39.894 38.373c-1.65 8.535-5.727 14.573-10.492 14.573-3.114 0-5.934-2.578-7.973-6.747" stroke="#fff" stroke-width="2.5" stroke-linecap="round" />
+  <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M19.08 43.4c0-.564.464-1.02 1.035-1.02.572 0 1.033.456 1.033 1.02 0 .566-.461 1.022-1.033 1.022-.571 0-1.034-.456-1.034-1.022z" fill="#fff" />
+  <path d="M47.308 22.685c-4.277-2.391-10.636-3.907-17.735-3.907-12.878 0-23.317 4.986-23.317 11.138 0 6.15 10.44 11.137 23.317 11.137s23.316-4.987 23.316-11.137c0-1.558-.67-3.042-1.879-4.389" stroke="#fff" stroke-width="2.5" />
+  <path clip-rule="evenodd" d="M48.75 26.875a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" stroke="#fff" stroke-width="2.5" /></svg>
 
 
 
+          <p>the Daily DONUT</p>
+        </div>
 
-    </nav>
+        <div class="nav-item positive" data-name="positive">
+          
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M52.007 34.484c0 11.28-9.178 20.426-20.497 20.426-11.322 0-20.5-9.145-20.5-20.426 0-11.282 9.178-20.426 20.5-20.426 11.32 0 20.497 9.145 20.497 20.426z" stroke="#fff" stroke-width="2.5" />
+  <path d="M19.9 31.645a3.404 3.404 0 0 1 2.773-3.944 3.414 3.414 0 0 1 3.957 2.762M36.389 30.463a3.415 3.415 0 0 1 3.957-2.762 3.405 3.405 0 0 1 2.771 3.943M21.855 37.888a10.243 10.243 0 0 0 9.654 6.81c4.46 0 8.245-2.846 9.653-6.81M6.875 12.5v10M11.875 17.5h-10M50.676 50.188v6.38M53.878 53.378h-6.405M24.72 1.411c.176 1.56-.573 1.644-.396 3.205.175 1.563.923 1.48 1.1 3.042.175 1.563-.572 1.647-.395 3.21M57.716 17.93c-.874.603-1.113.258-1.989.861-.875.606-.636.949-1.513 1.555-.878.604-1.116.258-1.993.862M10.342 50.564c-.875.602-1.115.258-1.99.86-.875.606-.636.95-1.513 1.554-.877.606-1.116.261-1.993.864" stroke="#fff" stroke-width="2.5" /></svg>
+
+
+
+          <p>the Positive DONUT</p>
+        </div>
+
+        <div class="nav-item future" data-name="future">
+          
+
+
+<svg class="donut-icon #fff " viewbox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path clip-rule="evenodd" d="M50.795 8.768s-13.258-.884-23.865 9.723c-7.955 7.956-12.374 17.677-12.374 17.677l4.419 4.42 4.42 4.419s9.722-4.419 17.677-12.374c10.606-10.608 9.723-23.865 9.723-23.865z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path clip-rule="evenodd" d="M40.188 26.446a5 5 0 1 1-7.071-7.072 5 5 0 0 1 7.07 7.072z" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M42.85 9.65a9.318 9.318 0 0 0 6.885 7.733M21.798 24.402l-5.325.852a3.617 3.617 0 0 0-2.722 2.076l-3.615 7.954 5.16-.616M35.161 37.765l-.852 5.326a3.615 3.615 0 0 1-2.075 2.72l-7.956 3.616.617-5.16" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" />
+  <path d="M12.559 41.54l-2.835 2.835M18.987 47.968L14.756 52.2M15.773 44.754L8.75 51.777" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+
+
+
+          <p>the Futuristic DONUT</p>
+        </div>
+      </nav>
+
+
+    </div>
+
   </div>
 </header>
 <!-- end global header -->
@@ -198,8 +417,8 @@
 </div> <!-- ends 'wrapper' div -->
 	<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/body-scroll-lock@2.6.3/lib/bodyScrollLock.min.js"></script>
-	<script type="text/javascript" src="/js/plugins/lodash/lodash.custom.min.js"></script>
-	<script type="text/javascript" src="/js/main.min.js"></script>
+	<script type="text/javascript" src="js/plugins/headroom/headroom.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
 
 	
 	

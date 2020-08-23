@@ -39,6 +39,8 @@
 		</div>
 </section>
 
+{% import "../templates/elements/icon.html" as 'icon' %}
+
 <section class="homepage-about-plank">
 	<div class="ingredients half">
 		<a href="about.html">
@@ -46,19 +48,19 @@
 				<h1>the DONUT* Ingredients</h1>
 				<div class="ingredients-wrapper">
 					<div class="ingredient">
-						<img class="icon" src="svg/icon-lightbulb.svg">
+						{{ icon.build('lightbulb', 'dough', 'icon') }}
 						<p class="medium">Fact-based News</p>
 					</div>
 					<div class="ingredient">
-						<img class="icon" src="svg/icon-opinion-free.svg">
+						{{ icon.build('opinion-free', 'periwinkle', 'icon') }}
 						<p class="medium">Opinion-free information</p>
 					</div>
 					<div class="ingredient">
-						<img class="icon" src="svg/icon-360.svg">
+						{{ icon.build('360', 'sky', 'icon') }}
 						<p class="medium">Equal representation on the issues</p>
 					</div>
 					<div class="ingredient">
-						<img class="icon" src="svg/icon-positivity.svg">
+						{{ icon.build('positivity', 'pink', 'icon') }}
 						<p class="medium">Relentless positivity</p>
 					</div>
 				</div>

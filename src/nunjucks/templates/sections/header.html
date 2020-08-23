@@ -1,32 +1,120 @@
+{% import '../elements/icon.html' as icon %}
+
 <!-- Begin Global Header -->
 <header>
   <div class="header-block--desktop-nav">
     <nav>
+
       <div class="nav-item">
         <a href="{{pages.home.slug}}" title="Home">Home</a>
       </div>
+
       <div class="nav-item">
         <a href="{{pages.about.slug}}" title="About">About</a>
       </div>
+
       <div class="nav-item">
         <a href="{{pages.shop.slug}}" title="Shop">Shop</a>
       </div>
-      <div class="nav-item has-submenu">
-        <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
+
+      <div class="nav-item has-mega-menu">
+        <p>Newsletters <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
             <path d="M1.594 1.485l4 4 4-4" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" /></svg></p>
-        <div class="outer">
-          <nav class="submenu">
-            <svg class="submenu-point" width="50" height="10" xmlns="http://www.w3.org/2000/svg">
-              <path d="M25 10H0c16.12 0 21.548-6.368 25-10v.004C28.452 3.632 33.88 10 50 10H25v-.26.26z" fill="#FFF" fill-rule="evenodd" /></svg>
-            <div class="submenu-item latest">
-              <a href="{{pages.latest.slug}}" title="{{pages.latest.title}}">Latest</a>
+        <div class="mega-menu">
+
+          <div class="mega-menu--tabs">
+            <div class="inner">
+
+              <div class="tab daily active" data-tab="daily">
+                {{ icon.build('360') }}
+                <p class="title">The Daily DONUT</p>
+              </div>
+
+              <div class="tab positive" data-tab="positive">
+                {{ icon.build('positivity') }}
+                <p class="title">The Positive DONUT</p>
+              </div>
+
+              <div class="tab future" data-tab="future">
+                {{ icon.build('rocket') }}
+                <p class="title">The Futuristic DONUT</p>
+              </div>
+
             </div>
-            <div class="submenu-item">
-              <a href="{{pages.archive.slug}}" title="{{pages.archive.title}}">Archive</a>
+          </div>
+
+          <div class="mega-menu--main" data-active="daily">
+
+            <div class="main daily active">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                {{ icon.build('360') }}
+                <div class="title">
+                  <h1 class="display">The Daily DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Fact-Based. Impartial. Engaging</h6>
+                  <p>Leave no stone unturned. Stay on top of the latest U.S. politics and geopolitical news - and how both sides are responding.</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                  <a href="#" class="btn stroke white">See Today's Newsletter</a>
+                  <a href="#" class="btn stroke white">Archives</a>
+                </div>
+              </div>
             </div>
-          </nav>
+
+            <div class="main positive">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                {{ icon.build('positivity') }}
+                <div class="title">
+                  <h1 class="display">The Positive DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Your antidote to news anxiety</h6>
+                  <p>Start each weekday with “awww”-inspiring stories you don’t hear about in the news. Guaranteed to put a smile on your face (even if it’s just with bad puns).</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="main future">
+              <div class="inner">
+                <div class="menu-back">
+                  <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+                  </svg> Back
+                </div>
+                {{ icon.build('rocket') }}
+                <div class="title">
+                  <h1 class="display">The Futuristic DONUT</h1>
+                </div>
+                <div class="description">
+                  <h6>Get psyched about what's ahead</h6>
+                  <p>Discover cutting-edge tech innovations, the latest medical breakthroughs, and other odds and ends shaping the future of our world. In other words, just plain old cool sh*t.</p>
+                </div>
+                <div class="ctas">
+                  <a href="#" class="btn white">Subscribe</a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
         </div>
       </div>
+
     </nav>
   </div>
   <div class="header-block--cta">
@@ -62,26 +150,58 @@
     <span></span>
     <span></span>
   </div>
-  <div class="mobile-nav-wrapper">
-    <nav id="mobile-menu">
+  <div class="mobile-menu-wrapper">
+    <div class="inner">
 
-      <a href="{{pages.home.slug}}" title="{{pages.home.title}}">Home</a>
-      <a href="{{pages.about.slug}}" title="{{pages.about.title}}">About</a>
-      <a href="{{pages.shop.slug}}" title="{{pages.shop.title}}">Shop</a>
+      <nav class="mobile-menu main">
+        <div class="nav-item">
+          <a href="{{pages.home.slug}}" title="{{pages.home.title}}">Home</a>
+        </div>
 
-      <div class="nav-item has-submenu">
-        <p>Our Newsletter <svg width="11" height="7" xmlns="http://www.w3.org/2000/svg">
-            <path d="M1.594 1.485l4 4 4-4" stroke="#FFF" stroke-width="2" fill="none" fill-rule="evenodd" /></svg></p>
-        <nav class="submenu">
-          <a href="{{pages.latest.slug}}" title="{{pages.latest.title}}">Latest</a>
-          <a href="{{pages.archive.slug}}" title="{{pages.archive.title}}">Archive</a>
-        </nav>
-      </div>
+        <div class="nav-item">
+          <a href="{{pages.about.slug}}" title="{{pages.about.title}}">About</a>
+        </div>
+
+        <div class="nav-item">
+          <a href="{{pages.shop.slug}}" title="{{pages.shop.title}}">Shop</a>
+        </div>
+
+        <div class="nav-item newsletters">
+          <p>Newsletters</p>
+          <div class="newsletters-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </nav>
+
+      <nav class="mobile-menu newsletters">
+        <div class="menu-back">
+          <svg width="12" height="18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 2L3 9l7 7" stroke="#fff" stroke-width="3" />
+          </svg> Back
+        </div>
+
+        <div class="nav-item daily" data-name="daily">
+          {{ icon.build('360') }}
+          <p>the Daily DONUT</p>
+        </div>
+
+        <div class="nav-item positive" data-name="positive">
+          {{ icon.build('positivity') }}
+          <p>the Positive DONUT</p>
+        </div>
+
+        <div class="nav-item future" data-name="future">
+          {{ icon.build('rocket') }}
+          <p>the Futuristic DONUT</p>
+        </div>
+      </nav>
 
 
+    </div>
 
-
-    </nav>
   </div>
 </header>
 <!-- end global header -->

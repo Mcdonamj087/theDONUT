@@ -83,7 +83,7 @@ const logoAnimationContainer = document.querySelector('.lottie-wrapper');
 
 var animation = bodymovin.loadAnimation({
   container: logoAnimationContainer, // Required
-  path: 'http://localhost:3000/lottie-json/donut-text-expand/data.json', // Required
+  path: 'lottie-json/donut-text-expand/data.json', // Required
   renderer: 'svg', // Required
   loop: false, // Optional
   autoplay: false, // Optional

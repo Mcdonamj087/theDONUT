@@ -36,7 +36,7 @@ $btn-timing-function: 0.2s cubic-bezier(0, 0, 0.2, 1);
 
 // Header
 ///////////////////////////////////////////////
-$header-height: 100px;
+$header-height: 76px;
 $header-height-mobile: 60px;
 
 $mq-min-xl: 1200px;
@@ -49,3 +49,7 @@ $mq-max-xl: ($mq-min-xl - 1);
 $mq-max-lg: ($mq-min-lg - 1);
 $mq-max-md: ($mq-min-md - 1);
 $mq-max-sm: ($mq-min-sm - 1);
+
+// Timing Functions
+///////////////////////////////////////////////
+$quartic-ease-out: cubic-bezier(0.17, 0.84, 0.44, 1);

@@ -21,10 +21,11 @@ body {
 .wrapper {
   overflow: hidden;
   position: relative;
-  // margin-top: $header-height;
-  // @media screen and (max-width: $mq-max-lg) {
-  // 	margin-top: $header-height-mobile;
-  // }
+  margin-top: $header-height-mobile;
+
+  @include breakpoint('lg') {
+    margin-top: $header-height;
+  }
 }
 
 .padding-100 {
@@ -130,17 +131,44 @@ img.adapt {
 }
 
 // Generates utility classes for colored backgrounds
-$donut-bkg-colors: (
+$donut-colors: (
   black: $black,
   soft-black: $soft-black,
+  bright-black: $bright-black,
+  cream: $cream,
+  periwinkle: $periwinkle,
   pink: $pink,
+  green: $green,
+  sky: $sky,
+  chocolate: $chocolate,
+  schoolbus: $schoolbus,
+  hotbutton: $hotbutton,
+  dough: $dough,
 );
 
-@each $key in map-keys($donut-bkg-colors) {
-  $color: map-get($donut-bkg-colors, $key);
+@each $key in map-keys($donut-colors) {
+  $color: map-get($donut-colors, $key);
 
   .bkg--#{$key} {
     background: $color;
     color: adapt_text($color);
+  }
+}
+
+svg.donut-icon {
+  width: 60px;
+  height: auto;
+}
+
+@each $key in map-keys($donut-colors) {
+  $color: map-get($donut-colors, $key);
+
+  svg.donut-icon.#{$key} {
+    path:not(.shape) {
+      stroke: $color;
+    }
+    path.shape {
+      fill: $color;
+    }
   }
 }

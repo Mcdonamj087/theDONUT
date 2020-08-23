@@ -4,11 +4,11 @@
 
 .homepage-hero {
   background: $black;
-  padding-top: 110px;
+  padding-top: 30px;
   padding-bottom: 60px;
 
   @include breakpoint('sm') {
-    padding-top: 130px;
+    padding-top: 50px;
     padding-bottom: 115px;
   }
 

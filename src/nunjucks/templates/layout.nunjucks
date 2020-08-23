@@ -13,9 +13,9 @@
 	<meta name="msapplication-TileColor" content="#2b5797">
 	<meta name="theme-color" content="#ffffff">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="{{root_url}}/css/bootstrap-grid.min.css">
-	<link rel="stylesheet" type="text/css" href="{{root_url}}/css/styles.css">
-	<script type="text/javascript" src="{{root_url}}/js/active_campaign_forms.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/active_campaign_forms.js"></script>
 </head>
 <body 
 	{% if page and not body_class %} 
@@ -33,8 +33,8 @@
 </div> <!-- ends 'wrapper' div -->
 	<script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/body-scroll-lock@2.6.3/lib/bodyScrollLock.min.js"></script>
-	<script type="text/javascript" src="/js/plugins/lodash/lodash.custom.min.js"></script>
-	<script type="text/javascript" src="/js/main.min.js"></script>
+	<script type="text/javascript" src="js/plugins/headroom/headroom.min.js"></script>
+	<script type="text/javascript" src="js/main.min.js"></script>
 
 	{% for script in scripts[page] %}
 		<script type="text/javascript" src="{{ script }}"></script>

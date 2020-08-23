@@ -2,17 +2,19 @@
  Welcome
 **********************************************/
 .welcome-container {
-  padding-top: 160px;
-  padding-bottom: 150px;
+  padding-top: 130px;
+  padding-bottom: 100px;
+
   @include breakpoint('sm') {
-    padding-top: 130px;
-    padding-bottom: 100px;
+    padding-top: 160px;
+    padding-bottom: 150px;
   }
 
   .inner {
     max-width: 540px;
     margin: auto;
   }
+
   h1,
   .welcome-gif {
     margin-bottom: 30px;
@@ -23,59 +25,76 @@
   @include clearfix;
   margin-top: 60px;
   display: flex;
+  flex-flow: column;
+  justify-content: center;
+
   @include breakpoint('sm') {
-    flex-direction: column;
-    justify-content: center;
+    flex-flow: row;
   }
+
   .social-links {
-    margin-left: -5px;
-    margin-right: -5px;
-    margin-top: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    justify-content: center;
+
     @include breakpoint('sm') {
-      margin-top: 30px;
-      margin-bottom: 30px;
-      justify-content: center;
+      margin-left: -5px;
+      margin-right: -5px;
+      margin-top: 48px;
+      justify-content: flex-start;
     }
+
     a {
       margin: 0 5px;
       background: $black;
       @include size(34px);
     }
+
     img {
       @include size(34px);
     }
   }
+
   .postscript {
     position: relative;
-    @media screen and (min-width: $mq-min-sm) {
-      margin-right: 15px;
+    margin-right: 15px;
+
+    @include breakpoint('sm') {
+      margin-right: 0;
     }
   }
+
   .tshirt {
     max-width: 160px;
     flex: 1 0 auto;
-    align-self: flex-start;
+    align-self: center;
+
     @include breakpoint('sm') {
-      align-self: center;
+      align-self: flex-start;
     }
   }
+
   .arrow {
     position: absolute;
     right: 0;
     bottom: 40px;
+    display: none;
+
     @include breakpoint('sm') {
-      display: none;
+      display: block;
     }
   }
 }
 
 $particles: 50;
+$particle_size: 6px;
 $width: 500;
 $height: 500;
 
 // Create the explosion...
 $box-shadow: ();
 $box-shadow2: ();
+
 @for $i from 0 through $particles {
   $box-shadow: $box-shadow,
     random($width)-$width /
@@ -87,6 +106,7 @@ $box-shadow2: ();
       hsl(random(360), 100, 50);
   $box-shadow2: $box-shadow2, 0 0 #fff;
 }
+
 @mixin keyframes($animationName) {
   @-webkit-keyframes #{$animationName} {
     @content;
@@ -128,8 +148,7 @@ $box-shadow2: ();
 .pyro > .before,
 .pyro > .after {
   position: absolute;
-  width: 5px;
-  height: 5px;
+  @include size($particle_size);
   border-radius: 50%;
   box-shadow: $box-shadow2;
   @include animation(
